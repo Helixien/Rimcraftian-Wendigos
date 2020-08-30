@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+
+    <name>Rimcraftian Horror: Wendigos</name>
+    <author>Helixien, Taranchuk, Luizi</author>
+    <supportedVersions>
+		<li>1.2</li>
+    </supportedVersions>
+    <packageId>HLX.Rimcraftian.Wendigos</packageId>
+    <description></description>
+	<url></url>
+	<modDependencies>
+        <li>
+            <packageId>brrainz.harmony</packageId>
+            <displayName>Harmony</displayName>
+            <downloadUrl>https://github.com/Helixien/RimworldAlteredCarbon</downloadUrl>
+            <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2196278117</steamWorkshopUrl>
+        </li>
+    </modDependencies>
+    <loadAfter>
+        <li>Ludeon.RimWorld</li>
+        <li>Ludeon.RimWorld.Royalty</li>
+        <li>brrainz.harmony</li>
+		<li>OskarPotocki.VanillaFactionsExpanded.Core</li>
+		<li>OskarPotocki.VanillaExpandedFramework</li>
+    </loadAfter>
+
+</ModMetaData>
