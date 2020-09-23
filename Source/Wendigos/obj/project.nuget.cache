@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "bJfLMHCm9SnCWGrs757Vy6kCAxTGUYOkDeq+P+JPTwC4eVlWw2xm6eIlFI5uHnTN799/09sNfj6eo/gV/Rfh4Q==",
+  "success": true,
+  "projectFilePath": "c:\\GAMES\\Rimworld\\Mods\\Rimcraftian-Wendigos\\Source\\Wendigos\\Wendigos.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Vova\\.nuget\\packages\\krafs.rimworld.ref\\1.2.2753\\krafs.rimworld.ref.1.2.2753.nupkg.sha512",
+    "C:\\Users\\Vova\\.nuget\\packages\\lib.harmony\\2.0.2\\lib.harmony.2.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

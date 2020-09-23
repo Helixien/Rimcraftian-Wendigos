@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<HediffDef ParentName="DiseaseBase">
+		<defName>RCW_Wendigoism</defName>
+		<label>wendigoism</label>
+		<labelNoun>a wendigoism</labelNoun>
+		<description>A sickness as old as mankind itself. When humans fall to the graving of their own flesh, their mind and body changes. They become feral creatures, humanoid in appearance, but human no longer. They will do everything they can to eat human flesh, no matter the cost.</description>
+		<hediffClass>Wendigos.Hediff_Wendigoism</hediffClass>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.1</severityPerDay>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>initial</label>
+				<becomeVisible>false</becomeVisible>
+			</li>
+			<li>
+				<label>active</label>
+				<minSeverity>0.50</minSeverity>
+			</li>
+			<li>
+				<label>completed</label>
+				<minSeverity>1</minSeverity>
+			</li>
+		</stages>
+	</HediffDef>
+
+
+	<HediffDef ParentName="AddictionBase">
+		<defName>RCW_HumanMeatAddiction</defName>
+		<label>human meat addiction</label>
+		<description>An addiction to human meat. Long-term presence of human meat has caused neurological adaptations at the cellular level, so the brain can no longer function properly without the drug.
+\nWithout regular doses of human meat, withdrawal symptoms will begin. However, extended abstinence will force the brain to adapt back to its normal state, resolving the addiction.</description>
+		<hediffClass>Wendigos.Hediff_HumanMeatAddiction</hediffClass>
+		<causesNeed>RCW_NeedHumanMeat</causesNeed>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.045</severityPerDay>
+				<showDaysToRecover>true</showDaysToRecover>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>withdrawal</label>
+				<painFactor>3</painFactor>
+				<restFallFactorOffset>0.3</restFallFactorOffset>
+				<hungerRateFactorOffset>0.5</hungerRateFactorOffset>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.20</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.50</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>-0.20</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>-0.20</offset>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.10</offset>
+					</li>
+				</capMods>
+				<mentalStateGivers>
+					<li>
+						<mentalState>Binging_DrugExtreme</mentalState>
+						<mtbDays>40</mtbDays>
+					</li>
+					<li>
+						<mentalState>Wander_Psychotic</mentalState>
+						<mtbDays>10</mtbDays>
+					</li>
+				</mentalStateGivers>
+			</li>
+		</stages>
+	</HediffDef>
+
+</Defs>
