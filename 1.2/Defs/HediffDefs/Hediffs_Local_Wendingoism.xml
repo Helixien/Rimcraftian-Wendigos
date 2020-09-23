@@ -27,6 +27,24 @@
 			</li>
 		</stages>
 	</HediffDef>
+	
+		<HediffDef>
+		<defName>RCW_WendigoismActive</defName>
+		<label>wendigoism</label>
+		<labelNoun>a wendigoism</labelNoun>
+		<description>A sickness as old as mankind itself. When humans fall to the graving of their own flesh, their mind and body changes. They become feral creatures, humanoid in appearance, but human no longer. They will do everything they can to eat human flesh, no matter the cost.</description>
+		<hediffClass>Wendigos.Hediff_WendigoismActive</hediffClass>
+		<stages>
+			<li>
+				<label>Day</label>
+				<minSeverity>0.20</minSeverity>
+			</li>
+			<li>
+				<label>Night</label>
+				<minSeverity>0.80</minSeverity>
+			</li>
+		</stages>
+	</HediffDef>
 
 
 	<HediffDef ParentName="AddictionBase">

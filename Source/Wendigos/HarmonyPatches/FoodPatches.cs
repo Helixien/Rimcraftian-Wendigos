@@ -16,14 +16,14 @@ using Verse.AI.Group;
 
 namespace Wendigos
 {
-    [HarmonyPatch(typeof(FoodUtility), "ThoughtsFromIngesting")]
+    [HarmonyPatch(typeof(Thing), "Ingested")]
     public class Patch_ThoughtsFromIngesting
     {
-        private static void Postfix(Pawn ingester, Thing foodSource, ThingDef foodDef)
+        private static void Prefix(Thing __instance, Pawn ingester, float nutritionWanted)
         {
             if (ingester.RaceProps.Humanlike)
             {
-                if (FoodUtility.IsHumanlikeMeat(foodDef))
+                if (FoodUtility.IsHumanlikeMeat(__instance.def))
                 {
                     if (!ingester.IsWendigo())
                     {
@@ -39,12 +39,12 @@ namespace Wendigos
                     else
                     {
                         var need = ingester.needs.TryGetNeed<Need_HumanMeat>();
-                        need.CurLevel += foodSource.GetStatValue(StatDefOf.Nutrition);
+                        need.CurLevel += __instance.GetStatValue(StatDefOf.Nutrition);
                     }
                 }
                 else
                 {
-                    CompIngredients compIngredients = foodSource.TryGetComp<CompIngredients>();
+                    CompIngredients compIngredients = __instance.TryGetComp<CompIngredients>();
                     if (compIngredients != null)
                     {
                         var humanIngredients = compIngredients.ingredients.Where(x => FoodUtility.IsHumanlikeMeat(x)).Count();
@@ -62,12 +62,21 @@ namespace Wendigos
                         else
                         {
                             var need = ingester.needs.TryGetNeed<Need_HumanMeat>();
-                            need.CurLevel += foodSource.GetStatValue(StatDefOf.Nutrition) / (float)humanIngredients;
+                            need.CurLevel += __instance.GetStatValue(StatDefOf.Nutrition) * ((float)compIngredients.ingredients.Count * (float)humanIngredients / 100f);
                         }
                     }
                 }
-            }
 
+                if (ingester.IsWendigo())
+                {
+                    if (!__instance.def.IsMeat)
+                    {
+                        Log.Message(ingester + " - " + __instance + " - " + __instance.def + " - " + __instance.def.IsMeat , true);
+                        HealthUtility.AdjustSeverity(ingester, HediffDefOf.FoodPoisoning, 0.1f);
+                        ingester.jobs.StartJob(JobMaker.MakeJob(JobDefOf.Vomit), JobCondition.InterruptForced);
+                    }
+                }
+            }
         }
     }
 }

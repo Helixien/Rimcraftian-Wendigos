@@ -23,6 +23,7 @@ namespace Wendigos
                 newPawn.Drawer.renderer.graphics.ResolveAllGraphics();
                 GenSpawn.Spawn(newPawn, this.pawn.Position, this.pawn.Map);
                 newPawn.health.AddHediff(WendigosDefOf.RCW_HumanMeatAddiction);
+                newPawn.health.AddHediff(WendigosDefOf.RCW_WendigoismActive);
                 this.pawn.Destroy(DestroyMode.Vanish);
                 if (selected) Find.Selector.Select(newPawn);
             }

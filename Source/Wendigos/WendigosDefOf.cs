@@ -13,6 +13,8 @@ namespace Wendigos
 	{
 		public static HediffDef RCW_Wendigoism;
 
+		public static HediffDef RCW_WendigoismActive;
+
 		public static HediffDef RCW_HumanMeatAddiction;
 
 		public static ThingDef RCW_WendigoFledgling;

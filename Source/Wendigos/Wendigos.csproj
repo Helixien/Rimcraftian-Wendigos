@@ -44,6 +44,7 @@
     <Compile Include="HarmonyPatches\FoodPatches.cs" />
     <Compile Include="HarmonyPatches\HarmonyInit.cs" />
     <Compile Include="Hediffs\Hediff_HumanMeatAddiction.cs" />
+    <Compile Include="Hediffs\Hediff_WendigoismActive.cs" />
     <Compile Include="Thoughts\ThoughtWorker_StrangeHunger.cs" />
     <Compile Include="Needs\Need_HumanMeat.cs" />
     <Compile Include="WendigosUtils.cs" />
