@@ -121,13 +121,14 @@
 	</ThingDef>
 	
 	<!-- ============================================================ -->
+	<!-- ============================================================ -->
 
     <PawnKindDef Name="RCW-WendigoKindBase" Abstract="True">
         <defaultFactionType>RCW-FeralWendigos</defaultFactionType>
     </PawnKindDef>
 
-    <PawnKindDef ParentName="RCW-WendigoKindBase">
-        <defName>RCW-FeralWendigo</defName>
+    <PawnKindDef ParentName="RCW-WendigoKindBase" Name="RCW-WendigoFeral" Abstract="True">
+        <defName>RCW-WendigoFeral</defName>
         <label>feral wendigo</label>
         <race>RCW-FeralWendigo</race>
         <combatPower>1000</combatPower>
@@ -149,6 +150,12 @@
             </li>
         </lifeStages>
     </PawnKindDef>
+	
+    <PawnKindDef ParentName="RCW-WendigoFeral">
+        <defName>RCW-WendigoFeralControlled</defName>
+    </PawnKindDef>
+	
+	<!-- ============================================================ -->
 
     <PawnKindDef ParentName="RCW-WendigoKindBase">
         <defName>RCW-AncientFeral</defName>
