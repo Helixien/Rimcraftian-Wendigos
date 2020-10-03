@@ -1,19 +1,19 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  
-  <ThoughtDef>
-    <defName>RCW_StrangeHunger</defName>
-    <workerClass>Wendigos.ThoughtWorker_StrangeHunger</workerClass>
-    <nullifyingTraits>
-      <li>Cannibal</li>
-    </nullifyingTraits>
-    <stages>
-      <li>
-        <label>strange hunger</label>
-        <description>I feel a strange hunger for….. human flesh? What is happening to me!?</description>
-        <baseMoodEffect>-5</baseMoodEffect>
-      </li>
-    </stages>
-  </ThoughtDef>
-  
+
+    <ThoughtDef>
+        <defName>RCW_StrangeHunger</defName>
+        <workerClass>Wendigos.ThoughtWorker_StrangeHunger</workerClass>
+        <nullifyingTraits>
+            <li>Cannibal</li>
+        </nullifyingTraits>
+        <stages>
+            <li>
+                <label>strange hunger</label>
+                <description>I feel a strange hunger for….. human flesh? What is happening to me!?</description>
+                <baseMoodEffect>-5</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
 </Defs>
