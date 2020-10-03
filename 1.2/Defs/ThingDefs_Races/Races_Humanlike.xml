@@ -2,7 +2,7 @@
 <Defs>
 
 	<ThingDef ParentName="BasePawn">
-		<defName>RCW_WendigoFledgling</defName>
+		<defName>RCW-WendigoFledgling</defName>
 		<label>wendigo</label>
 		<description>A baseline human, mostly unmodified by gene engineering and mostly unchanged by evolutionary pressures on non-Earth planets.</description>
 		<statBases>
@@ -156,7 +156,7 @@
 	</ThingDef>
 
 	<PawnKindDef Name="WendingoBase" Abstract="True">
-		<race>RCW_WendigoFledgling</race>
+		<race>RCW-WendigoFledgling</race>
 		<defaultFactionType>RCW_FeralWendigos</defaultFactionType>
 		<maxGenerationAge>60</maxGenerationAge>
 		<chemicalAddictionChance>0.05</chemicalAddictionChance>
@@ -168,7 +168,7 @@
 	</PawnKindDef>
 
 	<PawnKindDef ParentName="WendingoBase">
-		<defName>RCW_WendigoFledglingPawnKind</defName>
+		<defName>RCW-WendigoFledglingPawnKind</defName>
 		<label>wendingo fledling</label>
 		<combatPower>90</combatPower>
 		<canBeSapper>true</canBeSapper>

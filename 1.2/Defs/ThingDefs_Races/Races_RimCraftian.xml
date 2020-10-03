@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ThingDef ParentName="AnimalThingBase" Name="RCW-WendigoBase" Abstract="True">
+        <race>
+            <herdMigrationAllowed>false</herdMigrationAllowed>
+            <fleshType>Wendigo-Flesh</fleshType>
+            <herdMigrationAllowed>false</herdMigrationAllowed>
+           <manhunterOnDamageChance>0.99</manhunterOnDamageChance>
+            <hasGenders>true</hasGenders>
+        </race>
+        <statBases>
+            <ToxicSensitivity>0.25</ToxicSensitivity>
+            <ComfyTemperatureMax>20</ComfyTemperatureMax>
+            <ComfyTemperatureMin>-25</ComfyTemperatureMin>
+        </statBases>
+    </ThingDef>
+
+    <ThingDef ParentName="RCW-WendigoBase" Name="RCW-AncientWendigoBase" Abstract="True">
+        <statBases>
+            <MoveSpeed>3.5</MoveSpeed>
+            <ComfyTemperatureMin>-20</ComfyTemperatureMin>
+            <MeatAmount>0</MeatAmount>
+            <Flammability>2.0</Flammability>
+            <LeatherAmount>0</LeatherAmount>
+            <MarketValue>1500</MarketValue>
+        </statBases>
+        <tools>
+            <li>
+                <label>left claw</label>
+                <capacities>
+                    <li>Scratch</li>
+                </capacities>
+                <power>4</power>
+                <cooldownTime>0.85</cooldownTime>
+                <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+            </li>
+            <li>
+                <label>right claw</label>
+                <capacities>
+                    <li>Scratch</li>
+                </capacities>
+                <power>4</power>
+                <cooldownTime>0.85</cooldownTime>
+                <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+            </li>
+            <li>
+                <label>head</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>5</power>
+                <cooldownTime>1.65</cooldownTime>
+                <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+                <chanceFactor>0.2</chanceFactor>
+            </li>
+        </tools>
+        <race>
+            <body>RCW-WendigoHumanoid</body>
+            <baseBodySize>1.50</baseBodySize>
+            <baseHungerRate>1.0</baseHungerRate>
+            <baseHealthScale>15</baseHealthScale>
+            <leatherDef>Leather_Human</leatherDef>
+            <wildness>0.99</wildness>
+            <useMeatFrom>Human</useMeatFrom>
+            <manhunterOnDamageChance>1.0</manhunterOnDamageChance>
+            <manhunterOnTameFailChance>1.0</manhunterOnTameFailChance>
+            <trainability>Advanced</trainability>
+            <gestationPeriodDays>75</gestationPeriodDays>
+            <litterSizeCurve>
+                <points>
+                    <li>(0.99, 0)</li>
+                    <li>(1, 1)</li>
+                    <li>(1.01, 0)</li>
+                </points>
+            </litterSizeCurve>
+            <lifeExpectancy>4000</lifeExpectancy>
+            <lifeStageAges>
+                <li>
+                    <def>AnimalAdult</def>
+                    <minAge>0</minAge>
+                    <soundWounded>WMH_Pawn_Leshy_Wounded</soundWounded>
+                    <soundDeath>WMH_Pawn_Leshy_Death</soundDeath>
+                    <soundCall>WMH_Pawn_Leshy_Call</soundCall>
+                    <soundAngry>WMH_Pawn_Leshy_Angry</soundAngry>
+                </li>
+            </lifeStageAges>
+            <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+            <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+            <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+        </race>
+        <tradeTags>
+            <li>RCW-Wendigo</li>
+        </tradeTags>
+    </ThingDef>
+	
+	<!-- ============================================================ -->
+	
+	<ThingDef ParentName="RCW-WendigoBase">
+		<defName>RCW-FeralWendigo</defName>
+		<label>feral wendigo</label>
+		<description>placeholder</description>
+	</ThingDef>
+	
+	<ThingDef ParentName="RCW-AncientWendigoBase">
+		<defName>RCW-AncientFeral</defName>
+		<label>ancient wendigo</label>
+		<description>placeholder</description>
+	</ThingDef>
+	
+	<ThingDef ParentName="RCW-AncientWendigoBase">
+		<defName>RCW-AncientHerder</defName>
+		<label>ancient wendigo</label>
+		<description>placeholder</description>
+	</ThingDef>
+	
+	<ThingDef ParentName="RCW-AncientWendigoBase">
+		<defName>RCW-AncientStalker</defName>
+		<label>ancient wendigo</label>
+		<description>placeholder</description>
+	</ThingDef>
+	
+	<!-- ============================================================ -->
+
+    <PawnKindDef Name="RCW-WendigoKindBase" Abstract="True">
+        <defaultFactionType>RCW-FeralWendigos</defaultFactionType>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="RCW-WendigoKindBase">
+        <defName>RCW-FeralWendigo</defName>
+        <label>feral wendigo</label>
+        <race>RCW-FeralWendigo</race>
+        <combatPower>1000</combatPower>
+        <canArriveManhunter>false</canArriveManhunter>
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Things/Pawn/Monster/Wendigo/WendigoHulk/WendigoHulkA</texPath>
+                    <drawSize>1.0</drawSize>
+                    <shadowData>
+                        <volume>(0.8, 0.6, 0.6)</volume>
+                        <offset>(0,0,-0.3)</offset>
+                    </shadowData>
+                </bodyGraphicData>
+                <dessicatedBodyGraphicData>
+                    <texPath>Things/Pawn/Monster/Wendigo/WendigoHulk/Dessicated_WendigoHulkA</texPath>
+                    <drawSize>1.0</drawSize>
+                </dessicatedBodyGraphicData>
+            </li>
+        </lifeStages>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="RCW-WendigoKindBase">
+        <defName>RCW-AncientFeral</defName>
+        <label>ancient wendigo</label>
+        <race>RCW-AncientFeral</race>
+        <combatPower>1000</combatPower>
+        <canArriveManhunter>false</canArriveManhunter>
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Things/Pawn/Monster/AncientWendigo/AncientFeral/AncientFeral</texPath>
+                    <drawSize>3.2</drawSize>
+                    <shadowData>
+                        <volume>(0.8, 0.6, 0.6)</volume>
+                        <offset>(0,0,-0.3)</offset>
+                    </shadowData>
+                </bodyGraphicData>
+                <dessicatedBodyGraphicData>
+                    <texPath>Things/Pawn/Monster/AncientWendigo/AncientFeral/Dessicated_AncientFeral</texPath>
+                    <drawSize>3.2</drawSize>
+                </dessicatedBodyGraphicData>
+            </li>
+        </lifeStages>
+    </PawnKindDef>
+	
+    <PawnKindDef ParentName="RCW-WendigoKindBase">
+        <defName>RCW-AncientHerder</defName>
+        <label>ancient wendigo</label>
+        <race>RCW-AncientHerder</race>
+        <combatPower>1000</combatPower>
+        <canArriveManhunter>false</canArriveManhunter>
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Things/Pawn/Monster/AncientWendigo/AncientHerder/AncientHerder</texPath>
+                    <drawSize>3.2</drawSize>
+                    <shadowData>
+                        <volume>(0.8, 0.6, 0.6)</volume>
+                        <offset>(0,0,-0.3)</offset>
+                    </shadowData>
+                </bodyGraphicData>
+                <dessicatedBodyGraphicData>
+                    <texPath>Things/Pawn/Monster/AncientWendigo/AncientHerder/Dessicated_AncientHerder</texPath>
+                    <drawSize>3.2</drawSize>
+                </dessicatedBodyGraphicData>
+            </li>
+        </lifeStages>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="RCW-WendigoKindBase">
+        <defName>RCW-AncientStalker</defName>
+        <label>ancient wendigo</label>
+        <race>RCW-AncientStalker</race>
+        <combatPower>1000</combatPower>
+        <canArriveManhunter>false</canArriveManhunter>
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Things/Pawn/Monster/AncientWendigo/AncientStalker/AncientStalker</texPath>
+                    <drawSize>3.2</drawSize>
+                    <shadowData>
+                        <volume>(0.8, 0.6, 0.6)</volume>
+                        <offset>(0,0,-0.3)</offset>
+                    </shadowData>
+                </bodyGraphicData>
+                <dessicatedBodyGraphicData>
+                    <texPath>Things/Pawn/Monster/AncientWendigo/AncientStalker/Dessicated_AncientStalker</texPath>
+                    <drawSize>3.2</drawSize>
+                </dessicatedBodyGraphicData>
+            </li>
+        </lifeStages>
+    </PawnKindDef>
+	
+</Defs>

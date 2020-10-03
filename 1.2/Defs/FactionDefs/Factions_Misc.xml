@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-    <FactionDef ParentName="HumanFactionBase" Name="RCW_WendigoTribeBase" Abstract="True">
-        <pawnSingular>tribesman</pawnSingular>
-        <pawnsPlural>tribespeople</pawnsPlural>
+    <FactionDef ParentName="HumanFactionBase" Name="RCW-WendigoTribeBase" Abstract="True">
+        <pawnSingular>cannibal</pawnSingular>
+        <pawnsPlural>cannibals</pawnsPlural>
         <categoryTag>Tribal</categoryTag>
         <listOrderPriority>20</listOrderPriority>
         <settlementGenerationWeight>1</settlementGenerationWeight>
@@ -23,7 +23,7 @@
                 </categories>
             </li>
         </backstoryFilters>
-        <leaderTitle>chief</leaderTitle>
+        <leaderTitle>fleshwalker</leaderTitle>
         <hairTags>
             <li>Tribal</li>
         </hairTags>
@@ -139,8 +139,8 @@
         <settlementTexturePath>World/WorldObjects/TribalSettlement</settlementTexturePath>
     </FactionDef>
 
-    <FactionDef ParentName="RCW_WendigoTribeBase">
-        <defName>RCW_TribeCannibal</defName>
+    <FactionDef ParentName="RCW-WendigoTribeBase">
+        <defName>RCW-TribeCannibal</defName>
         <label>cannibalistic tribe</label>
         <description>These people have been here a very long time. Maybe their ancestors crashed here a thousand years ago. Maybe they survived some cataclysm that destroyed a technological civilization here. In any case, the tribals are mostly nomadic people who live off the land using primitive tools and weapons.\n\nDespite their apparent technological weakness, the tribals can be dangerous enemies because of their skill with low-tech warfare, their numbers, and their hardiness.\n\nThis particular tribe is driven by a blood-and-honor culture; you will not be able to ally with them!</description>
         <colorSpectrum>

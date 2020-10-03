@@ -2,7 +2,7 @@
 <Defs>
 
     <FactionDef ParentName="FactionBase">
-        <defName>RCW_FeralWendigos</defName>
+        <defName>RCW-FeralWendigos</defName>
         <label>wendigos</label>
         <pawnSingular>wendigo</pawnSingular>
         <pawnsPlural>wendigos</pawnsPlural>
