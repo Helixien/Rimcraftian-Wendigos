@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-    <ThingDef ParentName="AnimalThingBase" Name="RCW-WendigoBase" Abstract="True">
+    <ThingDef ParentName="AnimalThingBase" Name="RCW_WendigoBase" Abstract="True">
         <race>
             <herdMigrationAllowed>false</herdMigrationAllowed>
-            <fleshType>Wendigo-Flesh</fleshType>
-            <herdMigrationAllowed>false</herdMigrationAllowed>
-           <manhunterOnDamageChance>0.99</manhunterOnDamageChance>
+			<manhunterOnDamageChance>0.99</manhunterOnDamageChance>
             <hasGenders>true</hasGenders>
         </race>
         <statBases>
@@ -16,7 +14,7 @@
         </statBases>
     </ThingDef>
 
-    <ThingDef ParentName="RCW-WendigoBase" Name="RCW-AncientWendigoBase" Abstract="True">
+    <ThingDef ParentName="RCW_WendigoBase" Name="RCW_AncientWendigoBase" Abstract="True">
         <statBases>
             <MoveSpeed>3.5</MoveSpeed>
             <ComfyTemperatureMin>-20</ComfyTemperatureMin>
@@ -56,7 +54,7 @@
             </li>
         </tools>
         <race>
-            <body>RCW-WendigoHumanoid</body>
+            <body>RCW_WendigoHumanoid</body>
             <baseBodySize>1.50</baseBodySize>
             <baseHungerRate>1.0</baseHungerRate>
             <baseHealthScale>15</baseHealthScale>
@@ -96,26 +94,26 @@
 	
 	<!-- ============================================================ -->
 	
-	<ThingDef ParentName="RCW-WendigoBase">
-		<defName>RCW-FeralWendigo</defName>
+	<ThingDef ParentName="RCW_WendigoBase">
+		<defName>RCW_FeralWendigo</defName>
 		<label>feral wendigo</label>
 		<description>placeholder</description>
 	</ThingDef>
 	
-	<ThingDef ParentName="RCW-AncientWendigoBase">
-		<defName>RCW-AncientFeral</defName>
+	<ThingDef ParentName="RCW_AncientWendigoBase">
+		<defName>RCW_AncientFeral</defName>
 		<label>ancient wendigo</label>
 		<description>placeholder</description>
 	</ThingDef>
 	
-	<ThingDef ParentName="RCW-AncientWendigoBase">
-		<defName>RCW-AncientHerder</defName>
+	<ThingDef ParentName="RCW_AncientWendigoBase">
+		<defName>RCW_AncientHerder</defName>
 		<label>ancient wendigo</label>
 		<description>placeholder</description>
 	</ThingDef>
 	
-	<ThingDef ParentName="RCW-AncientWendigoBase">
-		<defName>RCW-AncientStalker</defName>
+	<ThingDef ParentName="RCW_AncientWendigoBase">
+		<defName>RCW_AncientStalker</defName>
 		<label>ancient wendigo</label>
 		<description>placeholder</description>
 	</ThingDef>
@@ -123,16 +121,16 @@
 	<!-- ============================================================ -->
 	<!-- ============================================================ -->
 
-    <PawnKindDef Name="RCW-WendigoKindBase" Abstract="True">
-        <defaultFactionType>RCW-FeralWendigos</defaultFactionType>
+    <PawnKindDef Name="RCW_WendigoKindBase" Abstract="True">
+        <defaultFactionType>RCW_FeralWendigos</defaultFactionType>
     </PawnKindDef>
 
-    <PawnKindDef ParentName="RCW-WendigoKindBase" Name="RCW-WendigoFeral" Abstract="True">
-        <defName>RCW-WendigoFeral</defName>
+    <PawnKindDef ParentName="RCW_WendigoKindBase" Name="RCW_WendigoFeral" Abstract="True">
+        <defName>RCW_WendigoFeral</defName>
         <label>feral wendigo</label>
-        <race>RCW-FeralWendigo</race>
-        <combatPower>1000</combatPower>
-        <canArriveManhunter>false</canArriveManhunter>
+        <race>RCW_FeralWendigo</race>
+        <combatPower>250</combatPower>
+        <canArriveManhunter>true</canArriveManhunter>
         <lifeStages>
             <li>
                 <bodyGraphicData>
@@ -151,16 +149,17 @@
         </lifeStages>
     </PawnKindDef>
 	
-    <PawnKindDef ParentName="RCW-WendigoFeral">
-        <defName>RCW-WendigoFeralControlled</defName>
+    <PawnKindDef ParentName="RCW_WendigoFeral">
+        <defName>RCW_WendigoFeralControlled</defName>
+        <canArriveManhunter>false</canArriveManhunter>
     </PawnKindDef>
 	
 	<!-- ============================================================ -->
 
-    <PawnKindDef ParentName="RCW-WendigoKindBase">
-        <defName>RCW-AncientFeral</defName>
+    <PawnKindDef ParentName="RCW_WendigoKindBase">
+        <defName>RCW_AncientFeral</defName>
         <label>ancient wendigo</label>
-        <race>RCW-AncientFeral</race>
+        <race>RCW_AncientFeral</race>
         <combatPower>1000</combatPower>
         <canArriveManhunter>false</canArriveManhunter>
         <lifeStages>
@@ -181,10 +180,10 @@
         </lifeStages>
     </PawnKindDef>
 	
-    <PawnKindDef ParentName="RCW-WendigoKindBase">
-        <defName>RCW-AncientHerder</defName>
+    <PawnKindDef ParentName="RCW_WendigoKindBase">
+        <defName>RCW_AncientHerder</defName>
         <label>ancient wendigo</label>
-        <race>RCW-AncientHerder</race>
+        <race>RCW_AncientHerder</race>
         <combatPower>1000</combatPower>
         <canArriveManhunter>false</canArriveManhunter>
         <lifeStages>
@@ -205,10 +204,10 @@
         </lifeStages>
     </PawnKindDef>
 
-    <PawnKindDef ParentName="RCW-WendigoKindBase">
-        <defName>RCW-AncientStalker</defName>
+    <PawnKindDef ParentName="RCW_WendigoKindBase">
+        <defName>RCW_AncientStalker</defName>
         <label>ancient wendigo</label>
-        <race>RCW-AncientStalker</race>
+        <race>RCW_AncientStalker</race>
         <combatPower>1000</combatPower>
         <canArriveManhunter>false</canArriveManhunter>
         <lifeStages>

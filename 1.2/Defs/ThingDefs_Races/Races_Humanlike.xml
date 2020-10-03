@@ -2,7 +2,7 @@
 <Defs>
 
 	<ThingDef ParentName="BasePawn">
-		<defName>RCW-WendigoFledgling</defName>
+		<defName>RCW_WendigoFledgling</defName>
 		<label>wendigo</label>
 		<description>A baseline human, mostly unmodified by gene engineering and mostly unchanged by evolutionary pressures on non-Earth planets.</description>
 		<statBases>
@@ -154,9 +154,11 @@
 			<li MayRequire="Ludeon.RimWorld.Royalty">CureAbasia</li>
 		</recipes>
 	</ThingDef>
+	
+	<!-- ============================================================ -->
 
-	<PawnKindDef Name="WendingoBase" Abstract="True">
-		<race>RCW-WendigoFledgling</race>
+	<PawnKindDef Name="RCW_WendingoHumanoidBase" Abstract="True">
+		<race>RCW_WendigoFledgling</race>
 		<defaultFactionType>RCW_FeralWendigos</defaultFactionType>
 		<maxGenerationAge>60</maxGenerationAge>
 		<chemicalAddictionChance>0.05</chemicalAddictionChance>
@@ -167,8 +169,8 @@
 		</apparelTags>
 	</PawnKindDef>
 
-	<PawnKindDef ParentName="WendingoBase">
-		<defName>RCW-WendigoFledglingPawnKind</defName>
+	<PawnKindDef ParentName="RCW_WendingoHumanoidBase">
+		<defName>RCW_WendigoFledglingPawnKind</defName>
 		<label>wendingo fledling</label>
 		<combatPower>90</combatPower>
 		<canBeSapper>true</canBeSapper>
