@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\GAMES\\Rimworld\\Mods\\Rimcraftian-Wendigos\\Source\\Wendigos\\Wendigos.csproj": {}
+    "C:\\GAMES\\Rimworld\\Mods\\Rimcraftian-Wendigos\\1.2\\Source\\Wendigos\\Wendigos.csproj": {}
   },
   "projects": {
-    "c:\\GAMES\\Rimworld\\Mods\\Rimcraftian-Wendigos\\Source\\Wendigos\\Wendigos.csproj": {
+    "C:\\GAMES\\Rimworld\\Mods\\Rimcraftian-Wendigos\\1.2\\Source\\Wendigos\\Wendigos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\GAMES\\Rimworld\\Mods\\Rimcraftian-Wendigos\\Source\\Wendigos\\Wendigos.csproj",
+        "projectUniqueName": "C:\\GAMES\\Rimworld\\Mods\\Rimcraftian-Wendigos\\1.2\\Source\\Wendigos\\Wendigos.csproj",
         "projectName": "Wendigos",
-        "projectPath": "c:\\GAMES\\Rimworld\\Mods\\Rimcraftian-Wendigos\\Source\\Wendigos\\Wendigos.csproj",
+        "projectPath": "C:\\GAMES\\Rimworld\\Mods\\Rimcraftian-Wendigos\\1.2\\Source\\Wendigos\\Wendigos.csproj",
         "packagesPath": "C:\\Users\\Vova\\.nuget\\packages\\",
-        "outputPath": "c:\\GAMES\\Rimworld\\Mods\\Rimcraftian-Wendigos\\Source\\Wendigos\\obj\\",
+        "outputPath": "C:\\GAMES\\Rimworld\\Mods\\Rimcraftian-Wendigos\\1.2\\Source\\Wendigos\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [

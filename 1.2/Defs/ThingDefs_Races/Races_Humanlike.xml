@@ -170,7 +170,7 @@
 	</PawnKindDef>
 
 	<PawnKindDef ParentName="RCW_WendingoHumanoidBase">
-		<defName>RCW_WendigoFledglingPawnKind</defName>
+		<defName>RCW_WendigoFledgling</defName>
 		<label>wendingo fledling</label>
 		<combatPower>90</combatPower>
 		<canBeSapper>true</canBeSapper>

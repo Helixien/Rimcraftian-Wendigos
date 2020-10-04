@@ -27,13 +27,14 @@ namespace Wendigos
                 {
                     if (!ingester.IsWendigo())
                     {
-                        float severity = 0.1f;
+                        float severity = 0.01f;
                         if (ingester.story.traits.HasTrait(TraitDefOf.Cannibal))
                         {
                             Log.Message("Found cannibal: initial severity: " + severity, true);
                             severity = severity - (severity * 30f / 100f); // Cannibals should gain severity 30% slower
                             Log.Message("Found cannibal: severity after: " + severity, true);
                         }
+                        severity *= __instance.stackCount;
                         HealthUtility.AdjustSeverity(ingester, WendigosDefOf.RCW_Wendigoism, severity);
                     }
                     else
@@ -50,13 +51,14 @@ namespace Wendigos
                         var humanIngredients = compIngredients.ingredients.Where(x => FoodUtility.IsHumanlikeMeat(x)).Count();
                         if (!ingester.IsWendigo())
                         {
-                            float severity = 0.1f;
+                            float severity = 0.01f;
                             if (ingester.story.traits.HasTrait(TraitDefOf.Cannibal))
                             {
                                 Log.Message("Found cannibal: initial severity: " + severity, true);
                                 severity = severity - (severity * 30f / 100f); // Cannibals should gain severity 30% slower
                                 Log.Message("Found cannibal: severity after: " + severity, true);
                             }
+                            severity *= humanIngredients;
                             HealthUtility.AdjustSeverity(ingester, WendigosDefOf.RCW_Wendigoism, severity);
                         }
                         else

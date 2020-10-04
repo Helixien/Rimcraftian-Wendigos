@@ -17,7 +17,7 @@
     <DebugSymbols>false</DebugSymbols>
     <DebugType>none</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\1.2\Assemblies\</OutputPath>
+    <OutputPath>..\..\Assemblies\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -41,6 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HarmonyPatches\InspirationPatch.cs" />
+    <Compile Include="Jobs\JobGiver_EatDeadAnimal.cs" />
+    <Compile Include="Jobs\JobGiver_HuntAnyWildAnimal.cs" />
+    <Compile Include="MentalStates\MentalState_FrenzyHunt.cs" />
+    <Compile Include="HarmonyPatches\MentalBreaksPatch.cs" />
+    <Compile Include="HarmonyPatches\ManhuntPatch.cs" />
     <Compile Include="HarmonyPatches\FoodPatches.cs" />
     <Compile Include="HarmonyPatches\HarmonyInit.cs" />
     <Compile Include="Hediffs\Hediff_HumanMeatAddiction.cs" />

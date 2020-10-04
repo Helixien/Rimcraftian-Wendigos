@@ -520,11 +520,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\GAMES\\Rimworld\\Mods\\Rimcraftian-Wendigos\\Source\\Wendigos\\Wendigos.csproj",
+      "projectUniqueName": "c:\\GAMES\\Rimworld\\Mods\\Rimcraftian-Wendigos\\1.2\\Source\\Wendigos\\Wendigos.csproj",
       "projectName": "Wendigos",
-      "projectPath": "c:\\GAMES\\Rimworld\\Mods\\Rimcraftian-Wendigos\\Source\\Wendigos\\Wendigos.csproj",
+      "projectPath": "c:\\GAMES\\Rimworld\\Mods\\Rimcraftian-Wendigos\\1.2\\Source\\Wendigos\\Wendigos.csproj",
       "packagesPath": "C:\\Users\\Vova\\.nuget\\packages\\",
-      "outputPath": "c:\\GAMES\\Rimworld\\Mods\\Rimcraftian-Wendigos\\Source\\Wendigos\\obj\\",
+      "outputPath": "c:\\GAMES\\Rimworld\\Mods\\Rimcraftian-Wendigos\\1.2\\Source\\Wendigos\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [

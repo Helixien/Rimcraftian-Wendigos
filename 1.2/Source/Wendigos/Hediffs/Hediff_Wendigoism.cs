@@ -14,11 +14,11 @@ namespace Wendigos
         public override void Tick()
         {
             base.Tick();
-            if (this.Severity > 0.2f)
+            if (this.Severity >= 1f)
             {
                 bool selected = Find.Selector.IsSelected(this.pawn);
                 this.pawn.health.RemoveHediff(this);
-                Pawn newPawn = WendigosUtils.GetPawnDuplicate(this.pawn, WendigosDefOf.RCW_WendigoFledglingPawnKind);
+                Pawn newPawn = WendigosUtils.GetPawnDuplicate(this.pawn, RCW_PawnKindDefOf.RCW_WendigoFledgling);
                 newPawn.story.melanin = 0f;
                 newPawn.Drawer.renderer.graphics.ResolveAllGraphics();
                 GenSpawn.Spawn(newPawn, this.pawn.Position, this.pawn.Map);

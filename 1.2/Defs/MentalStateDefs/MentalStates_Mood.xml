@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<MentalBreakDef>
+		<defName>RCW_FrenzyHunt</defName>
+		<mentalState>RCW_FrenzyHunt</mentalState>
+		<baseCommonality>1</baseCommonality>
+		<intensity>Extreme</intensity>
+	</MentalBreakDef>
+	
+	<MentalStateDef ParentName="BaseMentalState">
+		<defName>RCW_FrenzyHunt</defName>
+		<stateClass>Wendigos.MentalState_FrenzyHunt</stateClass>
+		<label>frenzy hunt</label>
+		<category>Aggro</category>
+		<blockInteractionInitiationExcept>
+			<li>Insult</li>
+		</blockInteractionInitiationExcept>
+		<blockInteractionRecipientExcept>
+			<li>Insult</li>
+		</blockInteractionRecipientExcept>
+		<blockRandomInteraction>true</blockRandomInteraction>
+		<moodRecoveryThought>Catharsis</moodRecoveryThought>
+		<blockNormalThoughts>true</blockNormalThoughts>
+		<nameColor>(0.9,0.2,0.5)</nameColor>
+		<beginLetter>{0} has gone frenzy hunt.\n\n[PAWN_pronoun] will attack wild animals.</beginLetter>
+		<beginLetterDef>ThreatSmall</beginLetterDef>
+		<minTicksBeforeRecovery>40000</minTicksBeforeRecovery>
+		<maxTicksBeforeRecovery>60000</maxTicksBeforeRecovery>
+		<recoveryMtbDays>0.166</recoveryMtbDays>
+		<recoveryMessage>{0}'s frenzy hunt has come to an end.</recoveryMessage>
+		<baseInspectLine>Mental state: Frenzy hunt</baseInspectLine>
+		<stateEffecter>Berserk</stateEffecter>
+		<tale>MentalStateBerserk</tale>
+		<recoverFromSleep>true</recoverFromSleep>
+		<unspawnedCanDo>true</unspawnedCanDo>
+	</MentalStateDef>
+
+</Defs>

@@ -301,12 +301,30 @@ namespace Wendigos
 
         public static bool IsWendigo(this Pawn pawn)
         {
-            if (pawn.def == WendigosDefOf.RCW_WendigoFledgling || pawn.kindDef == WendigosDefOf.RCW_WendigoFledglingPawnKind)
+            if (WendingoRaceDefs.Contains(pawn.def) || WendingoPawnKindDefs.Contains(pawn.kindDef))
             {
                 return true;
             }
             return false;
         }
+
+        public static List<ThingDef> WendingoRaceDefs = new List<ThingDef>
+        {
+            WendigosDefOf.RCW_AncientFeral,
+            WendigosDefOf.RCW_AncientHerder,
+            WendigosDefOf.RCW_AncientStalker,
+            WendigosDefOf.RCW_FeralWendigo,
+            WendigosDefOf.RCW_WendigoFledgling
+        };
+
+        public static List<PawnKindDef> WendingoPawnKindDefs = new List<PawnKindDef>
+        {
+            RCW_PawnKindDefOf.RCW_AncientFeral,
+            RCW_PawnKindDefOf.RCW_AncientHerder,
+            RCW_PawnKindDefOf.RCW_AncientStalker,
+            RCW_PawnKindDefOf.RCW_WendigoFeralControlled,
+            RCW_PawnKindDefOf.RCW_WendigoFledgling
+        };
     }
 }
 
