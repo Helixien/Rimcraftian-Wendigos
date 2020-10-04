@@ -77,10 +77,10 @@
                 <li>
                     <def>AnimalAdult</def>
                     <minAge>0</minAge>
-                    <soundWounded>WMH_Pawn_Leshy_Wounded</soundWounded>
-                    <soundDeath>WMH_Pawn_Leshy_Death</soundDeath>
-                    <soundCall>WMH_Pawn_Leshy_Call</soundCall>
-                    <soundAngry>WMH_Pawn_Leshy_Angry</soundAngry>
+                    <soundWounded>RCW_Pawn_AncientWendigo_Wounded</soundWounded>
+                    <soundDeath>RCW_Pawn_AncientWendigo_Death</soundDeath>
+                    <soundCall>RCW_Pawn_AncientWendigo_Call</soundCall>
+                    <soundAngry>RCW_Pawn_AncientWendigo_Angry</soundAngry>
                 </li>
             </lifeStageAges>
             <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
