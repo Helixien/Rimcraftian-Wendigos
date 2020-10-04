@@ -1,6 +1,9 @@
 ﻿using RimWorld;
+using System.Linq;
+using UnityEngine;
 using Verse;
 using Verse.AI;
+using static Verse.AI.ReservationManager;
 
 namespace Wendigos
 {
@@ -22,15 +25,7 @@ namespace Wendigos
 			Pawn prey = null;
 			if (mentalState.prey != null)
             {
-				if (!mentalState.prey.Dead)
-                {
-					prey = mentalState.prey;
-				}
-				else
-                {
-					Log.Message(pawn + " - ingest " + mentalState.prey, true);
-					return JobMaker.MakeJob(JobDefOf.Ingest, mentalState.prey);
-				}
+				prey = mentalState.prey;
 			}
 			else
             {
@@ -38,8 +33,19 @@ namespace Wendigos
 			}
 			if (prey != null)
             {
-				mentalState.prey = prey;
-				if (pawn.CanReach(prey, PathEndMode.Touch, Danger.Deadly))
+				if (prey.Dead)
+				{
+					if (prey.Corpse != null && !prey.Corpse.Destroyed)
+                    {
+						Job job = JobMaker.MakeJob(JobDefOf.Ingest, prey.Corpse);
+						job.count = 1;
+						Log.Message(pawn + " - ingest " + prey.Corpse, true);
+						return job;
+					}
+					mentalState.prey = null;
+					return null;
+				}
+				else if (pawn.CanReach(prey, PathEndMode.Touch, Danger.Deadly))
 				{
 					Log.Message(pawn + " - melee attack 2 - " + prey, true);
 					return MeleeAttackJob(pawn, prey);
@@ -73,9 +79,10 @@ namespace Wendigos
 		private Job MeleeAttackJob(Pawn pawn, Thing target)
 		{
 			Job job = JobMaker.MakeJob(JobDefOf.AttackMelee, target);
-			job.maxNumMeleeAttacks = 1;
+			job.maxNumMeleeAttacks = 10;
 			job.expiryInterval = Rand.Range(420, 900);
 			job.attackDoorIfTargetLost = true;
+			job.killIncappedTarget = true;
 			return job;
 		}
 

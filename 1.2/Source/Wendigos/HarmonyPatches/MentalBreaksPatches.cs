@@ -16,6 +16,22 @@ using Verse.AI.Group;
 
 namespace Wendigos
 {
+    [HarmonyPatch(typeof(MentalStateHandler), "ClearMentalStateDirect")]
+    public class Patch_ClearMentalStateDirect
+    {
+        private static bool Prefix(Pawn ___pawn, MentalState ___curStateInt)
+        {
+
+            if (___pawn.Map == null && ___curStateInt is MentalState_GoneFeral goneFeral && goneFeral.Age < ___curStateInt.def.minTicksBeforeRecovery)
+            {
+                Log.Message("ClearMentalStateDirect false: " + ___pawn + " - " + ___pawn.Map + " - " + ___curStateInt + " - " + ___curStateInt.Age + " - " + ___curStateInt.def.minTicksBeforeRecovery, true);
+                return false;
+            }
+            Log.Message("ClearMentalStateDirect true: " + ___pawn + " - " + ___pawn.Map + " - " + ___curStateInt, true);
+            return true;
+        }
+    }
+
     [HarmonyPatch(typeof(MentalStateHandler), "TryStartMentalState")]
     public class Patch_TryStartMentalState
     {

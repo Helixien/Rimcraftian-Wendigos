@@ -5,15 +5,28 @@
 		<xpath>Defs/ThinkTreeDef[defName="MentalStateCritical"]/thinkRoot/subNodes</xpath>
 		<value>
 			<li Class="ThinkNode_ConditionalMentalState">
-			  <state>RCW_FrenzyHunt</state>
-			  <subNodes>
-			    <li Class="ThinkNode_Priority">
-			      <subNodes>
-			        <li Class="Wendigos.JobGiver_HuntAnyWildAnimal" />
-			        <li Class="Wendigos.JobGiver_EatDeadAnimal"></li>
-			      </subNodes>
-			    </li>
-			  </subNodes>
+				<state>RCW_FrenzyHunt</state>
+				<subNodes>
+					<li Class="ThinkNode_Priority">
+						<subNodes>
+							<li Class="Wendigos.JobGiver_HuntAnyWildAnimal" />
+							<li Class="Wendigos.JobGiver_EatDeadAnimal"/>
+						</subNodes>
+					</li>
+				</subNodes>
+			</li>
+			<li Class="ThinkNode_ConditionalMentalState">
+				<state>RCW_GoneFeral</state>
+				<subNodes>
+					<li Class="ThinkNode_Priority">
+						<subNodes>
+							<li Class="JobGiver_ExitMap_Random">
+								<defaultLocomotion>Jog</defaultLocomotion>
+								<forceCanDig>true</forceCanDig>
+							</li>
+						</subNodes>
+					</li>
+				</subNodes>
 			</li>
 		</value>
 	</Operation>

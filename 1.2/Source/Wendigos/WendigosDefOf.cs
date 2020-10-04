@@ -20,7 +20,7 @@ namespace Wendigos
 		public static ThingDef RCW_AncientFeral;
 		public static ThingDef RCW_AncientHerder;
 		public static ThingDef RCW_AncientStalker;
-
+		public static MentalStateDef RCW_GoneFeral;
 	}
 
 	[DefOf]

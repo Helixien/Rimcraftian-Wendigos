@@ -44,8 +44,9 @@
     <Compile Include="HarmonyPatches\InspirationPatch.cs" />
     <Compile Include="Jobs\JobGiver_EatDeadAnimal.cs" />
     <Compile Include="Jobs\JobGiver_HuntAnyWildAnimal.cs" />
+    <Compile Include="MentalStates\MentalState_GoneFeral.cs" />
     <Compile Include="MentalStates\MentalState_FrenzyHunt.cs" />
-    <Compile Include="HarmonyPatches\MentalBreaksPatch.cs" />
+    <Compile Include="HarmonyPatches\MentalBreaksPatches.cs" />
     <Compile Include="HarmonyPatches\ManhuntPatch.cs" />
     <Compile Include="HarmonyPatches\FoodPatches.cs" />
     <Compile Include="HarmonyPatches\HarmonyInit.cs" />

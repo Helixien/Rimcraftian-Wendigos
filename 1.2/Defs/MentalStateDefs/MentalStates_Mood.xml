@@ -7,7 +7,7 @@
 		<baseCommonality>1</baseCommonality>
 		<intensity>Extreme</intensity>
 	</MentalBreakDef>
-	
+
 	<MentalStateDef ParentName="BaseMentalState">
 		<defName>RCW_FrenzyHunt</defName>
 		<stateClass>Wendigos.MentalState_FrenzyHunt</stateClass>
@@ -36,4 +36,35 @@
 		<unspawnedCanDo>true</unspawnedCanDo>
 	</MentalStateDef>
 
+	<MentalBreakDef>
+		<defName>RCW_GoneFeral</defName>
+		<mentalState>RCW_GoneFeral</mentalState>
+		<intensity>Extreme</intensity>
+		<baseCommonality>1</baseCommonality>
+		<commonalityFactorPerPopulationCurve>
+			<points>
+				<li>(7, 0)</li>
+				<li>(12, 1)</li>
+			</points>
+		</commonalityFactorPerPopulationCurve>
+	</MentalBreakDef>
+	
+	<MentalStateDef ParentName="BaseMentalState">
+		<defName>RCW_GoneFeral</defName>
+		<label>giving up and leaving</label>
+		<stateClass>Wendigos.MentalState_GoneFeral</stateClass>
+		<category>Misc</category>
+		<prisonersCanDo>false</prisonersCanDo>
+		<moodRecoveryThought>Catharsis</moodRecoveryThought>
+		<blockNormalThoughts>true</blockNormalThoughts>
+		<nameColor>(0.65, 0.9, 0.93)</nameColor>
+		<beginLetterLabel>gone feral</beginLetterLabel>
+		<beginLetter>{0} has given up on this community.\n\n[PAWN_pronoun] has decided to leave and pursue a better life elsewhere. You can try to arrest [PAWN_objective] as [PAWN_pronoun] leaves. Otherwise, you may still see [PAWN_objective] again some day.</beginLetter>
+		<beginLetterDef>NegativeEvent</beginLetterDef>
+		<recoveryMessage>{0} has had a change of heart and is coming back to the colony.</recoveryMessage>
+		<baseInspectLine>Mental state: gone feral and leaving</baseInspectLine>
+		<tale>MentalStateGaveUp</tale>
+		<allowBeatfire>true</allowBeatfire>
+		<escapingPrisonersIgnore>true</escapingPrisonersIgnore>
+	</MentalStateDef>
 </Defs>

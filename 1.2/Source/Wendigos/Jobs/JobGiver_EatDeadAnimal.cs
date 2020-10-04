@@ -23,8 +23,20 @@ namespace Wendigos
 				}
 				else
                 {
-					Log.Message(pawn + " - ingest " + mentalState.prey, true);
-					return JobMaker.MakeJob(JobDefOf.Ingest, mentalState.prey);
+					if (mentalState.prey.Corpse != null)
+					{
+						Job job = JobMaker.MakeJob(JobDefOf.Ingest, mentalState.prey.Corpse);
+						job.count = 1;
+						Log.Message(pawn + " - ingest 4 " + mentalState.prey.Corpse, true);
+						return job;
+					}
+					else
+					{
+						Job job = JobMaker.MakeJob(JobDefOf.Ingest, mentalState.prey);
+						job.count = 1;
+						Log.Message(pawn + " - ingest 3 " + mentalState.prey, true);
+						return job;
+					}
                 }
             }
 			Log.Message(pawn + " - return null 2", true);
