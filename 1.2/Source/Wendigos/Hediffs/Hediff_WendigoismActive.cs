@@ -11,10 +11,15 @@ namespace Wendigos
 {
     public class Hediff_WendigoismActive : HediffWithComps
     {
+        public override void PostAdd(DamageInfo? dinfo)
+        {
+            base.PostAdd(dinfo);
+            pawn.story.melanin = 0f;
+        }
         public override void Tick()
         {
             base.Tick();
-            var hourInt = GenLocalDate.HourInteger(pawn.Map);
+            int hourInt = GenLocalDate.HourInteger(pawn.Tile);
             if (hourInt >= 5 && hourInt <= 19)
             {
                 this.Severity = 0.19f;
@@ -23,6 +28,7 @@ namespace Wendigos
             {
                 this.Severity = 1f;
             }
+
         }
 
         public override void ExposeData()

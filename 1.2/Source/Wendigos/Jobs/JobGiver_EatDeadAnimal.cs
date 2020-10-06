@@ -19,7 +19,7 @@ namespace Wendigos
 				if (!mentalState.prey.Dead)
                 {
 					Log.Message(pawn + " - melee attack " + mentalState.prey, true);
-					return MeleeAttackJob(pawn, mentalState.prey);
+					return WendigosUtils.MeleeAttackJob(mentalState.prey);
 				}
 				else
                 {
@@ -41,15 +41,6 @@ namespace Wendigos
             }
 			Log.Message(pawn + " - return null 2", true);
 			return null;
-		}
-
-		private Job MeleeAttackJob(Pawn pawn, Thing target)
-		{
-			Job job = JobMaker.MakeJob(JobDefOf.AttackMelee, target);
-			job.maxNumMeleeAttacks = 1;
-			job.expiryInterval = Rand.Range(420, 900);
-			job.attackDoorIfTargetLost = true;
-			return job;
 		}
 	}
 }

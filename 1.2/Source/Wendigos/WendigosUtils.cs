@@ -6,6 +6,7 @@ using System.Runtime.CompilerServices;
 using HarmonyLib;
 using RimWorld;
 using Verse;
+using Verse.AI;
 
 namespace Wendigos
 {
@@ -298,6 +299,22 @@ namespace Wendigos
             return newPawn;
         }
 
+        public static Job MeleeAttackJob(Thing target)
+        {
+            Job job = JobMaker.MakeJob(JobDefOf.AttackMelee, target);
+            job.maxNumMeleeAttacks = 10;
+            job.expiryInterval = Rand.Range(420, 900);
+            job.attackDoorIfTargetLost = true;
+            job.killIncappedTarget = true;
+            return job;
+        }
+
+        public static Pawn FindPawnTarget(Pawn pawn)
+        {
+            return (Pawn)AttackTargetFinder.BestAttackTarget(pawn, TargetScanFlags.NeedThreat | TargetScanFlags.NeedAutoTargetable, (Thing x) => x is Pawn victim
+            && victim.RaceProps.Animal && victim.Faction == null, 0f, 9999f, default(IntVec3), float.MaxValue, canBash: true);
+        }
+
 
         public static bool IsWendigo(this Pawn pawn)
         {
@@ -306,6 +323,11 @@ namespace Wendigos
                 return true;
             }
             return false;
+        }
+
+        public static bool IsNightNow(Map map)
+        {
+            return GenLocalDate.HourInteger(map) >= 20 || GenLocalDate.HourInteger(map) <= 6;
         }
 
         public static List<ThingDef> WendingoRaceDefs = new List<ThingDef>
@@ -324,6 +346,13 @@ namespace Wendigos
             RCW_PawnKindDefOf.RCW_AncientStalker,
             RCW_PawnKindDefOf.RCW_WendigoFeralControlled,
             RCW_PawnKindDefOf.RCW_WendigoFledgling
+        };
+
+        public static List<MentalStateDef> WendingoMentalStatesDefs = new List<MentalStateDef>
+        {
+            WendigosDefOf.RCW_FrenzyHunt,
+            WendigosDefOf.RCW_CorpseConsumption,
+            WendigosDefOf.RCW_GoneFeral
         };
     }
 }

@@ -20,6 +20,13 @@ namespace Wendigos
 		public static ThingDef RCW_AncientFeral;
 		public static ThingDef RCW_AncientHerder;
 		public static ThingDef RCW_AncientStalker;
+		public static FactionDef RCW_FeralWendigos;
+		public static FactionDef RCW_TribeCannibal;
+		public static DutyDef RCW_WendigoAssaultColony;
+		public static DutyDef RCW_CannibalAssaultColony;
+		public static JobDef RCW_DigUpGrave;
+		public static MentalStateDef RCW_FrenzyHunt;
+		public static MentalStateDef RCW_CorpseConsumption;
 		public static MentalStateDef RCW_GoneFeral;
 	}
 

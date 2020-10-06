@@ -16,11 +16,22 @@
 				</subNodes>
 			</li>
 			<li Class="ThinkNode_ConditionalMentalState">
+				<state>RCW_CorpseConsumption</state>
+				<subNodes>
+					<li Class="ThinkNode_Priority">
+						<subNodes>
+							<li Class="Wendigos.JobGiver_DigGraves" />
+							<li Class="Wendigos.JobGiver_CorpseConsumption" />
+						</subNodes>
+					</li>
+				</subNodes>
+			</li>
+			<li Class="ThinkNode_ConditionalMentalState">
 				<state>RCW_GoneFeral</state>
 				<subNodes>
 					<li Class="ThinkNode_Priority">
 						<subNodes>
-							<li Class="JobGiver_ExitMap_Random">
+							<li Class="JobGiver_ExitMapRandom">
 								<defaultLocomotion>Jog</defaultLocomotion>
 								<forceCanDig>true</forceCanDig>
 							</li>

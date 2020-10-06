@@ -16,4 +16,15 @@
         </stages>
     </ThoughtDef>
 
+    <ThoughtDef>
+        <defName>RCW_HotTemperature</defName>
+        <workerClass>Wendigos.ThoughtWorker_FledlingTemperature</workerClass>
+        <stages>
+            <li>
+                <label>Hot weather</label>
+                <description>Hot weather</description>
+                <baseMoodEffect>-5</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
 </Defs>

@@ -38,7 +38,12 @@ namespace Wendigos
         private static bool Prefix(Pawn ___pawn, ref bool __result, MentalStateDef stateDef, string reason = null, bool forceWake = false,
             bool causedByMood = false, Pawn otherPawn = null, bool transitionSilently = false)
         {
-            if (___pawn.IsWendigo())
+            if (___pawn.IsWendigo() && !WendigosUtils.WendingoMentalStatesDefs.Contains(stateDef))
+            {
+                __result = false;
+                return false;
+            }
+            else if (!___pawn.IsWendigo() && WendigosUtils.WendingoMentalStatesDefs.Contains(stateDef))
             {
                 __result = false;
                 return false;

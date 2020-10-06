@@ -42,8 +42,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HarmonyPatches\InspirationPatch.cs" />
+    <Compile Include="HarmonyPatches\SpawnPatch.cs" />
+    <Compile Include="Jobs\JobGiver_DigGraves.cs" />
+    <Compile Include="Jobs\JobDriver_DigUpGrave.cs" />
     <Compile Include="Jobs\JobGiver_EatDeadAnimal.cs" />
+    <Compile Include="Jobs\JobGiver_CorpseConsumption.cs" />
     <Compile Include="Jobs\JobGiver_HuntAnyWildAnimal.cs" />
+    <Compile Include="MentalStates\MentalState_CorpseConsumption.cs" />
     <Compile Include="MentalStates\MentalState_GoneFeral.cs" />
     <Compile Include="MentalStates\MentalState_FrenzyHunt.cs" />
     <Compile Include="HarmonyPatches\MentalBreaksPatches.cs" />
@@ -52,8 +57,20 @@
     <Compile Include="HarmonyPatches\HarmonyInit.cs" />
     <Compile Include="Hediffs\Hediff_HumanMeatAddiction.cs" />
     <Compile Include="Hediffs\Hediff_WendigoismActive.cs" />
+    <Compile Include="Raids\IncidentWorker_CannibalRaid.cs" />
+    <Compile Include="Jobs\JobGiver_CaptureDownedVictimAndLeaveMap.cs" />
+    <Compile Include="Raids\LordJob_Cannibals_AssaultColony.cs" />
+    <Compile Include="Raids\LordToil_CannibalsAssaultColony.cs" />
+    <Compile Include="Raids\LordToil_NightWendigoAssaultColony.cs" />
+    <Compile Include="Raids\Trigger_SunLight.cs" />
+    <Compile Include="Raids\IncidentWorker_WendingoPack.cs" />
+    <Compile Include="Sites\SitePartWorker_DownedWendigo.cs" />
+    <Compile Include="Sites\GenStep_Ambush_Edge.cs" />
+    <Compile Include="Sites\SitePartWorker_WendigoAmbush.cs" />
+    <Compile Include="Thoughts\ThoughtWorker_FledlingTemperature.cs" />
     <Compile Include="Thoughts\ThoughtWorker_StrangeHunger.cs" />
     <Compile Include="Needs\Need_HumanMeat.cs" />
+    <Compile Include="Raids\LordJob_NightWendingo_AssaultColony.cs" />
     <Compile Include="WendigosUtils.cs" />
     <Compile Include="WendigosDefOf.cs" />
     <Compile Include="Hediffs\Hediff_Wendigoism.cs" />
