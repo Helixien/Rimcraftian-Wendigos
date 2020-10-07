@@ -5,7 +5,7 @@ using Verse.AI.Group;
 
 namespace Wendigos
 {
-	public class LordJob_NightWendingo_AssaultColony : LordJob
+	public class LordJob_Wendingo_AssaultColony : LordJob
 	{
 		private Faction assaulterFaction;
 
@@ -25,11 +25,11 @@ namespace Wendigos
 
 		public override bool GuiltyOnDowned => true;
 
-		public LordJob_NightWendingo_AssaultColony()
+		public LordJob_Wendingo_AssaultColony()
 		{
 		}
 
-		public LordJob_NightWendingo_AssaultColony(SpawnedPawnParams parms)
+		public LordJob_Wendingo_AssaultColony(SpawnedPawnParams parms)
 		{
 			assaulterFaction = parms.spawnerThing.Faction;
 			canKidnap = false;
@@ -37,7 +37,7 @@ namespace Wendigos
 			canSteal = false;
 		}
 
-		public LordJob_NightWendingo_AssaultColony(Faction assaulterFaction, bool canKidnap = true, bool canTimeoutOrFlee = true, bool sappers = false, bool useAvoidGridSmart = false, bool canSteal = true)
+		public LordJob_Wendingo_AssaultColony(Faction assaulterFaction, bool canKidnap = true, bool canTimeoutOrFlee = true, bool sappers = false, bool useAvoidGridSmart = false, bool canSteal = true)
 		{
 			this.assaulterFaction = assaulterFaction;
 			this.canKidnap = canKidnap;
@@ -78,16 +78,6 @@ namespace Wendigos
 				transition2.AddTrigger(new Trigger_NoFightingSappers());
 				stateGraph.AddTransition(transition2);
 			}
-			Transition transitionLeaveOnSunLight = new Transition(lordToil2, lordToil_ExitMap);
-			if (lordToil != null)
-			{
-				transitionLeaveOnSunLight.AddSource(lordToil);
-			}
-
-			transitionLeaveOnSunLight.AddTrigger(new Trigger_SunLight());
-			transitionLeaveOnSunLight.AddPreAction(new TransitionAction_Message("Wendigos.MessageRaidersLeavingDueSunLight"
-				.Translate(assaulterFaction.def.pawnsPlural.CapitalizeFirst(), assaulterFaction.Name)));
-			stateGraph.AddTransition(transitionLeaveOnSunLight);
 
 			if (assaulterFaction.def.humanlikeFaction)
 			{

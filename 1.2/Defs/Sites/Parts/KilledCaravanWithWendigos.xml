@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<SitePartDef>
+		<defName>RCW_KilledCaravanWithWendigos</defName>
+		<label>killed caravan with wendigos</label>
+		<description>killed caravan with wendigos</description>
+		<workerClass>Wendigos.SitePartWorker_KilledCaravanWithWendigos</workerClass>
+		<siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+		<expandingIconTexture>World/WorldObjects/Expanding/Sites/Ambush</expandingIconTexture>
+		<defaultHidden>true</defaultHidden>
+		<wantsThreatPoints>true</wantsThreatPoints>
+		<tags>
+			<li>RCW_KilledCaravanWithWendigos</li>
+		</tags>
+	</SitePartDef>
+
+	<GenStepDef>
+		<defName>RCW_KilledCaravanWithWendigos</defName>
+		<linkWithSite>RCW_KilledCaravanWithWendigos</linkWithSite>
+		<order>1600</order>
+		<genStep Class="Wendigos.GenStep_KilledCaravanWithWendigos" />
+	</GenStepDef>
+
+</Defs>

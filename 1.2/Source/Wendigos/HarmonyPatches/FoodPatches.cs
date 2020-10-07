@@ -16,6 +16,7 @@ using Verse.AI.Group;
 
 namespace Wendigos
 {
+
     [HarmonyPatch(typeof(Thing), "Ingested")]
     public class Patch_Ingested
     {
@@ -108,4 +109,95 @@ namespace Wendigos
             }
         }
     }
+
+    [HarmonyPatch(typeof(FoodUtility), "AddFoodPoisoningHediff")]
+    public class Patch_AddFoodPoisoningHediff
+    {
+        private static bool Prefix(Pawn pawn, Thing ingestible, FoodPoisonCause cause)
+        {
+            if (FoodUtility.IsHumanlikeMeat(ingestible.def) && pawn.IsWendigo())
+            {
+                return false;
+            }
+            return true;
+        }
+    }
+
+    [HarmonyPatch(typeof(FoodUtility), "ThoughtsFromIngesting")]
+    public class Patch_ThoughtsFromIngesting
+    {
+        private static bool Prefix(ref List<ThoughtDef> __result, List<ThoughtDef> ___ingestThoughts, Pawn ingester, Thing foodSource, ThingDef foodDef)
+        {
+            if (FoodUtility.IsHumanlikeMeat(foodSource.def) && ingester.IsWendigo())
+            {
+                __result = ThoughtsFromIngesting(ingester, foodSource, foodDef, ___ingestThoughts);
+                return false;
+            }
+            return true;
+        }
+
+        public static List<ThoughtDef> ThoughtsFromIngesting(Pawn ingester, Thing foodSource, ThingDef foodDef, List<ThoughtDef> ingestThoughts)
+        {
+            ingestThoughts.Clear();
+            if (ingester.needs == null || ingester.needs.mood == null)
+            {
+                return ingestThoughts;
+            }
+            if (!ingester.story.traits.HasTrait(TraitDefOf.Ascetic) && foodDef.ingestible.tasteThought != null)
+            {
+                ingestThoughts.Add(foodDef.ingestible.tasteThought);
+            }
+            CompIngredients compIngredients = foodSource.TryGetComp<CompIngredients>();
+            Building_NutrientPasteDispenser building_NutrientPasteDispenser = foodSource as Building_NutrientPasteDispenser;
+            if (FoodUtility.IsHumanlikeMeat(foodDef) && ingester.RaceProps.Humanlike)
+            {
+                ingestThoughts.Add(WendigosDefOf.RCW_AteHumanlikeMeatDirectWendigo);
+            }
+            else if (compIngredients != null)
+            {
+                for (int i = 0; i < compIngredients.ingredients.Count; i++)
+                {
+                    AddIngestThoughtsFromIngredient(compIngredients.ingredients[i], ingester, ingestThoughts);
+                }
+            }
+            else if (building_NutrientPasteDispenser != null)
+            {
+                Thing thing = building_NutrientPasteDispenser.FindFeedInAnyHopper();
+                if (thing != null)
+                {
+                    AddIngestThoughtsFromIngredient(thing.def, ingester, ingestThoughts);
+                }
+            }
+            if (foodDef.ingestible.specialThoughtDirect != null)
+            {
+                ingestThoughts.Add(foodDef.ingestible.specialThoughtDirect);
+            }
+            if (foodSource.IsNotFresh())
+            {
+                ingestThoughts.Add(ThoughtDefOf.AteRottenFood);
+            }
+            if (ModsConfig.RoyaltyActive && FoodUtility.InappropriateForTitle(foodDef, ingester, allowIfStarving: false))
+            {
+                ingestThoughts.Add(ThoughtDefOf.AteFoodInappropriateForTitle);
+            }
+            return ingestThoughts;
+        }
+
+        private static void AddIngestThoughtsFromIngredient(ThingDef ingredient, Pawn ingester, List<ThoughtDef> ingestThoughts)
+        {
+            if (ingredient.ingestible != null)
+            {
+                if (ingester.RaceProps.Humanlike && FoodUtility.IsHumanlikeMeat(ingredient))
+                {
+                    ingestThoughts.Add(WendigosDefOf.RCW_AteHumanlikeMeatDirectWendigo);
+                }
+                else if (ingredient.ingestible.specialThoughtAsIngredient != null)
+                {
+                    ingestThoughts.Add(ingredient.ingestible.specialThoughtAsIngredient);
+                }
+            }
+        }
+    }
+
+
 }

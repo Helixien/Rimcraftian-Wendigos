@@ -4,12 +4,12 @@ using Verse.AI.Group;
 
 namespace Wendigos
 {
-	public class LordToil_NightWendigoAssaultColony : LordToil
+	public class LordToil_WendigoAssaultColony : LordToil
 	{
 		private bool attackDownedIfStarving;
 		public override bool ForceHighStoryDanger => true;
 		public override bool AllowSatisfyLongNeeds => false;
-		public LordToil_NightWendigoAssaultColony(bool attackDownedIfStarving = false)
+		public LordToil_WendigoAssaultColony(bool attackDownedIfStarving = false)
 		{
 			this.attackDownedIfStarving = attackDownedIfStarving;
 		}

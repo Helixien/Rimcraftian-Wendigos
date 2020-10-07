@@ -348,6 +348,13 @@ namespace Wendigos
             RCW_PawnKindDefOf.RCW_WendigoFledgling
         };
 
+        public static List<PawnKindDef> AncientWendingoPawnKindDefs = new List<PawnKindDef>
+        {
+            RCW_PawnKindDefOf.RCW_AncientFeral,
+            RCW_PawnKindDefOf.RCW_AncientHerder,
+            RCW_PawnKindDefOf.RCW_AncientStalker
+        };
+
         public static List<MentalStateDef> WendingoMentalStatesDefs = new List<MentalStateDef>
         {
             WendigosDefOf.RCW_FrenzyHunt,

@@ -60,12 +60,15 @@
     <Compile Include="Raids\IncidentWorker_CannibalRaid.cs" />
     <Compile Include="Jobs\JobGiver_CaptureDownedVictimAndLeaveMap.cs" />
     <Compile Include="Raids\LordJob_Cannibals_AssaultColony.cs" />
+    <Compile Include="Raids\LordJob_Wendingo_AssaultColony.cs" />
     <Compile Include="Raids\LordToil_CannibalsAssaultColony.cs" />
     <Compile Include="Raids\LordToil_NightWendigoAssaultColony.cs" />
     <Compile Include="Raids\Trigger_SunLight.cs" />
     <Compile Include="Raids\IncidentWorker_WendingoPack.cs" />
+    <Compile Include="Sites\GenStep_KilledCaravanWithWendigos.cs" />
     <Compile Include="Sites\SitePartWorker_DownedWendigo.cs" />
     <Compile Include="Sites\GenStep_Ambush_Edge.cs" />
+    <Compile Include="Sites\SitePartWorker_KilledCaravanWithWendigos.cs" />
     <Compile Include="Sites\SitePartWorker_WendigoAmbush.cs" />
     <Compile Include="Thoughts\ThoughtWorker_FledlingTemperature.cs" />
     <Compile Include="Thoughts\ThoughtWorker_StrangeHunger.cs" />

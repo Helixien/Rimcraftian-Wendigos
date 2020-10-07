@@ -19,16 +19,18 @@ namespace Wendigos
         public override void Tick()
         {
             base.Tick();
-            int hourInt = GenLocalDate.HourInteger(pawn.Tile);
-            if (hourInt >= 5 && hourInt <= 19)
+            if (pawn != null)
             {
-                this.Severity = 0.19f;
+                int hourInt = GenLocalDate.HourInteger(pawn.Tile);
+                if (hourInt >= 5 && hourInt <= 19)
+                {
+                    this.Severity = 0.19f;
+                }
+                else if (hourInt >= 19 || hourInt <= 5)
+                {
+                    this.Severity = 1f;
+                }
             }
-            else if (hourInt >= 19 || hourInt <= 5)
-            {
-                this.Severity = 1f;
-            }
-
         }
 
         public override void ExposeData()

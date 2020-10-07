@@ -28,6 +28,7 @@ namespace Wendigos
 		public static MentalStateDef RCW_FrenzyHunt;
 		public static MentalStateDef RCW_CorpseConsumption;
 		public static MentalStateDef RCW_GoneFeral;
+		public static ThoughtDef RCW_AteHumanlikeMeatDirectWendigo;
 	}
 
 	[DefOf]
