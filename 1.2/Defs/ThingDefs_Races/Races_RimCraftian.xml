@@ -18,9 +18,9 @@
         <statBases>
             <MoveSpeed>3.5</MoveSpeed>
             <ComfyTemperatureMin>-20</ComfyTemperatureMin>
-            <MeatAmount>0</MeatAmount>
+            <MeatAmount>25</MeatAmount>
             <Flammability>2.0</Flammability>
-            <LeatherAmount>0</LeatherAmount>
+            <LeatherAmount>25</LeatherAmount>
             <MarketValue>1500</MarketValue>
         </statBases>
         <tools>
@@ -94,11 +94,11 @@
 	
     <ThingDef ParentName="RCW_WendigoBase" Name="RCW_FeralWendigo" Abstract="True">
         <statBases>
-            <MoveSpeed>3.5</MoveSpeed>
+            <MoveSpeed>2.5</MoveSpeed>
             <ComfyTemperatureMin>-20</ComfyTemperatureMin>
-            <MeatAmount>0</MeatAmount>
+            <MeatAmount>10</MeatAmount>
             <Flammability>2.0</Flammability>
-            <LeatherAmount>0</LeatherAmount>
+            <LeatherAmount>15</LeatherAmount>
             <MarketValue>1500</MarketValue>
         </statBases>
         <tools>
@@ -230,7 +230,7 @@
 	<!-- ============================================================ -->
 
     <PawnKindDef ParentName="RCW_WendigoKindBase">
-        <defName>RCW_AncientFeral</defName>
+        <defName>RCW_AncientFeralWendigo</defName>
         <label>ancient wendigo</label>
         <race>RCW_AncientFeral</race>
         <combatPower>1000</combatPower>
@@ -254,7 +254,7 @@
     </PawnKindDef>
 	
     <PawnKindDef ParentName="RCW_WendigoKindBase">
-        <defName>RCW_AncientHerder</defName>
+        <defName>RCW_AncientHerderWendigo</defName>
         <label>ancient wendigo</label>
         <race>RCW_AncientHerder</race>
         <combatPower>1000</combatPower>
@@ -278,7 +278,7 @@
     </PawnKindDef>
 
     <PawnKindDef ParentName="RCW_WendigoKindBase">
-        <defName>RCW_AncientStalker</defName>
+        <defName>RCW_AncientStalkerWendigo</defName>
         <label>ancient wendigo</label>
         <race>RCW_AncientStalker</race>
         <combatPower>1000</combatPower>
