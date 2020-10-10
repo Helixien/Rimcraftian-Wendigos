@@ -5,7 +5,7 @@
         <race>
             <herdMigrationAllowed>false</herdMigrationAllowed>
 			<manhunterOnDamageChance>0.99</manhunterOnDamageChance>
-            <hasGenders>true</hasGenders>
+            <hasGenders>false</hasGenders>
         </race>
         <statBases>
             <ToxicSensitivity>0.25</ToxicSensitivity>
@@ -14,7 +14,7 @@
         </statBases>
     </ThingDef>
 
-    <ThingDef ParentName="RCW_WendigoBase" Name="RCW_AncientWendigoBase" Abstract="True">
+    <ThingDef ParentName="RCW_WendigoBase" Name="RCW_AncientWendigo" Abstract="True">
         <statBases>
             <MoveSpeed>3.5</MoveSpeed>
             <ComfyTemperatureMin>-20</ComfyTemperatureMin>
@@ -72,7 +72,85 @@
                     <li>(1.01, 0)</li>
                 </points>
             </litterSizeCurve>
-            <lifeExpectancy>4000</lifeExpectancy>
+            <lifeExpectancy>3500</lifeExpectancy>
+            <lifeStageAges>
+                <li>
+                    <def>AnimalAdult</def>
+                    <minAge>0</minAge>
+                    <soundWounded>RCW_Pawn_AncientWendigo_Wounded</soundWounded>
+                    <soundDeath>RCW_Pawn_AncientWendigo_Death</soundDeath>
+                    <soundCall>RCW_Pawn_AncientWendigo_Call</soundCall>
+                    <soundAngry>RCW_Pawn_AncientWendigo_Angry</soundAngry>
+                </li>
+            </lifeStageAges>
+            <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+            <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+            <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+        </race>
+        <tradeTags>
+            <li>RCW-Wendigo</li>
+        </tradeTags>
+    </ThingDef>
+	
+    <ThingDef ParentName="RCW_WendigoBase" Name="RCW_FeralWendigo" Abstract="True">
+        <statBases>
+            <MoveSpeed>3.5</MoveSpeed>
+            <ComfyTemperatureMin>-20</ComfyTemperatureMin>
+            <MeatAmount>0</MeatAmount>
+            <Flammability>2.0</Flammability>
+            <LeatherAmount>0</LeatherAmount>
+            <MarketValue>1500</MarketValue>
+        </statBases>
+        <tools>
+            <li>
+                <label>left claw</label>
+                <capacities>
+                    <li>Scratch</li>
+                </capacities>
+                <power>4</power>
+                <cooldownTime>0.85</cooldownTime>
+                <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+            </li>
+            <li>
+                <label>right claw</label>
+                <capacities>
+                    <li>Scratch</li>
+                </capacities>
+                <power>4</power>
+                <cooldownTime>0.85</cooldownTime>
+                <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+            </li>
+            <li>
+                <label>head</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>5</power>
+                <cooldownTime>1.65</cooldownTime>
+                <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+                <chanceFactor>0.2</chanceFactor>
+            </li>
+        </tools>
+        <race>
+            <body>RCW_WendigoHumanoid</body>
+            <baseBodySize>1.50</baseBodySize>
+            <baseHungerRate>1.0</baseHungerRate>
+            <baseHealthScale>15</baseHealthScale>
+            <leatherDef>Leather_Human</leatherDef>
+            <wildness>0.99</wildness>
+            <useMeatFrom>Human</useMeatFrom>
+            <manhunterOnDamageChance>1.0</manhunterOnDamageChance>
+            <manhunterOnTameFailChance>1.0</manhunterOnTameFailChance>
+            <trainability>Advanced</trainability>
+            <gestationPeriodDays>75</gestationPeriodDays>
+            <litterSizeCurve>
+                <points>
+                    <li>(0.99, 0)</li>
+                    <li>(1, 1)</li>
+                    <li>(1.01, 0)</li>
+                </points>
+            </litterSizeCurve>
+            <lifeExpectancy>3500</lifeExpectancy>
             <lifeStageAges>
                 <li>
                     <def>AnimalAdult</def>
@@ -94,25 +172,25 @@
 	
 	<!-- ============================================================ -->
 	
-	<ThingDef ParentName="RCW_WendigoBase">
+	<ThingDef ParentName="RCW_FeralWendigo">
 		<defName>RCW_FeralWendigo</defName>
 		<label>feral wendigo</label>
 		<description>placeholder</description>
 	</ThingDef>
 	
-	<ThingDef ParentName="RCW_AncientWendigoBase">
+	<ThingDef ParentName="RCW_AncientWendigo">
 		<defName>RCW_AncientFeral</defName>
 		<label>ancient wendigo</label>
 		<description>placeholder</description>
 	</ThingDef>
 	
-	<ThingDef ParentName="RCW_AncientWendigoBase">
+	<ThingDef ParentName="RCW_AncientWendigo">
 		<defName>RCW_AncientHerder</defName>
 		<label>ancient wendigo</label>
 		<description>placeholder</description>
 	</ThingDef>
 	
-	<ThingDef ParentName="RCW_AncientWendigoBase">
+	<ThingDef ParentName="RCW_AncientWendigo">
 		<defName>RCW_AncientStalker</defName>
 		<label>ancient wendigo</label>
 		<description>placeholder</description>
