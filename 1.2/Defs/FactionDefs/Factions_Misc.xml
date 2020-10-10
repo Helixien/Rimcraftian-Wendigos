@@ -147,7 +147,6 @@
             <li>(1, 0.1, 0.1)</li>
         </colorSpectrum>
         <factionIconPath>World/WorldObjects/Expanding/WendigoTribe</factionIconPath>
-        <permanentEnemy>true</permanentEnemy>
         <goodwillDailyGain>0</goodwillDailyGain>
         <goodwillDailyFall>10</goodwillDailyFall>
     </FactionDef>
