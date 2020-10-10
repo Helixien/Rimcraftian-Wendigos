@@ -15,11 +15,6 @@ namespace Wendigos
 		public static HediffDef RCW_WendigoismActive;
 		public static HediffDef RCW_HumanMeatAddiction;
 		public static NeedDef RCW_NeedHumanMeat;
-		public static ThingDef RCW_WendigoFledgling;
-		public static ThingDef RCW_FeralWendigo;
-		public static ThingDef RCW_AncientFeral;
-		public static ThingDef RCW_AncientHerder;
-		public static ThingDef RCW_AncientStalker;
 		public static FactionDef RCW_FeralWendigos;
 		public static FactionDef RCW_TribeCannibal;
 		public static DutyDef RCW_WendigoAssaultColony;
@@ -29,16 +24,23 @@ namespace Wendigos
 		public static MentalStateDef RCW_CorpseConsumption;
 		public static MentalStateDef RCW_GoneFeral;
 		public static ThoughtDef RCW_AteHumanlikeMeatDirectWendigo;
+
+		public static ThingDef RCW_WendigoFledgling;
+		public static ThingDef RCW_FeralWendigo;
+		public static ThingDef RCW_AncientFeral;
+		public static ThingDef RCW_AncientHerder;
+		public static ThingDef RCW_AncientStalker;
 	}
 
 	[DefOf]
 	public static class RCW_PawnKindDefOf
     {
-		public static PawnKindDef RCW_WendigoFledgling;
-        public static PawnKindDef RCW_WendigoFeralControlled;
-        public static PawnKindDef RCW_AncientFeral;
-        public static PawnKindDef RCW_AncientHerder;
-        public static PawnKindDef RCW_AncientStalker;
+		//public static PawnKindDef RCW_WendigoFledgling;
+        //public static PawnKindDef RCW_WendigoFeralControlled;
+        public static PawnKindDef RCW_AncientFeralWendigo;
+        public static PawnKindDef RCW_AncientHerderWendigo;
+        public static PawnKindDef RCW_AncientStalkerWendigo;
+		public static PawnKindDef RCW_FeralWendigo;
 	}
 }
 

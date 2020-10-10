@@ -341,18 +341,18 @@ namespace Wendigos
 
         public static List<PawnKindDef> WendingoPawnKindDefs = new List<PawnKindDef>
         {
-            RCW_PawnKindDefOf.RCW_AncientFeral,
-            RCW_PawnKindDefOf.RCW_AncientHerder,
-            RCW_PawnKindDefOf.RCW_AncientStalker,
-            RCW_PawnKindDefOf.RCW_WendigoFeralControlled,
-            RCW_PawnKindDefOf.RCW_WendigoFledgling
+            RCW_PawnKindDefOf.RCW_AncientFeralWendigo,
+            RCW_PawnKindDefOf.RCW_AncientHerderWendigo,
+            RCW_PawnKindDefOf.RCW_AncientStalkerWendigo,
+            //RCW_PawnKindDefOf.RCW_WendigoFeralControlled,
+            //RCW_PawnKindDefOf.RCW_WendigoFledgling
         };
 
         public static List<PawnKindDef> AncientWendingoPawnKindDefs = new List<PawnKindDef>
         {
-            RCW_PawnKindDefOf.RCW_AncientFeral,
-            RCW_PawnKindDefOf.RCW_AncientHerder,
-            RCW_PawnKindDefOf.RCW_AncientStalker
+            RCW_PawnKindDefOf.RCW_AncientFeralWendigo,
+            RCW_PawnKindDefOf.RCW_AncientHerderWendigo,
+            RCW_PawnKindDefOf.RCW_AncientStalkerWendigo
         };
 
         public static List<MentalStateDef> WendingoMentalStatesDefs = new List<MentalStateDef>

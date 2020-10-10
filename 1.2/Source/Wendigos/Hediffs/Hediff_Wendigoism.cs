@@ -14,17 +14,17 @@ namespace Wendigos
         public override void Tick()
         {
             base.Tick();
-            if (this.Severity >= 1f)
-            {
-                bool selected = Find.Selector.IsSelected(this.pawn);
-                this.pawn.health.RemoveHediff(this);
-                Pawn newPawn = WendigosUtils.GetPawnDuplicate(this.pawn, RCW_PawnKindDefOf.RCW_WendigoFledgling);
-                GenSpawn.Spawn(newPawn, this.pawn.Position, this.pawn.Map);
-                newPawn.health.AddHediff(WendigosDefOf.RCW_HumanMeatAddiction);
-                newPawn.health.AddHediff(WendigosDefOf.RCW_WendigoismActive);
-                this.pawn.Destroy(DestroyMode.Vanish);
-                if (selected) Find.Selector.Select(newPawn);
-            }
+            //if (this.Severity >= 1f)
+            //{
+            //    bool selected = Find.Selector.IsSelected(this.pawn);
+            //    this.pawn.health.RemoveHediff(this);
+            //    Pawn newPawn = WendigosUtils.GetPawnDuplicate(this.pawn, RCW_PawnKindDefOf.RCW_WendigoFledgling);
+            //    GenSpawn.Spawn(newPawn, this.pawn.Position, this.pawn.Map);
+            //    newPawn.health.AddHediff(WendigosDefOf.RCW_HumanMeatAddiction);
+            //    newPawn.health.AddHediff(WendigosDefOf.RCW_WendigoismActive);
+            //    this.pawn.Destroy(DestroyMode.Vanish);
+            //    if (selected) Find.Selector.Select(newPawn);
+            //}
         }
     }
 }

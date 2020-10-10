@@ -64,7 +64,7 @@ namespace Wendigos
 			var faction = Find.FactionManager.FirstFactionOfDef(WendigosDefOf.RCW_FeralWendigos);
 			for (int i = 0; i < list.Where(x => x.RaceProps.Humanlike).Count() / 3; i++)
 			{
-				var wendigo = PawnGenerator.GeneratePawn(RCW_PawnKindDefOf.RCW_WendigoFledgling, faction);
+				var wendigo = PawnGenerator.GeneratePawn(RCW_PawnKindDefOf.RCW_FeralWendigo, faction);
 				wendigos.Add(wendigo);
 			}
 

@@ -73,10 +73,11 @@ namespace Wendigos
 
 		public static Pawn GenerateRefugee(int tile)
 		{
-			Pawn pawn = PawnGenerator.GeneratePawn(new PawnGenerationRequest(RCW_PawnKindDefOf.RCW_WendigoFledgling, GetRandomFactionForRefugee(), PawnGenerationContext.NonPlayer, tile, forceGenerateNewPawn: false, newborn: false, allowDead: false, allowDowned: false, canGeneratePawnRelations: true, mustBeCapableOfViolence: false, 20f, forceAddFreeWarmLayerIfNeeded: true, allowGay: true, allowFood: true, allowAddictions: true, inhabitant: false, certainlyBeenInCryptosleep: false, forceRedressWorldPawnIfFormerColonist: false, worldPawnFactionDoesntMatter: false, 0f, null, 1f, null, null, null, null, 0.2f));
-			HealthUtility.DamageUntilDowned(pawn, allowBleedingWounds: false);
-			HealthUtility.DamageLegsUntilIncapableOfMoving(pawn, allowBleedingWounds: false);
-			return pawn;
+			//Pawn pawn = PawnGenerator.GeneratePawn(new PawnGenerationRequest(RCW_PawnKindDefOf.RCW_WendigoFledgling, GetRandomFactionForRefugee(), PawnGenerationContext.NonPlayer, tile, forceGenerateNewPawn: false, newborn: false, allowDead: false, allowDowned: false, canGeneratePawnRelations: true, mustBeCapableOfViolence: false, 20f, forceAddFreeWarmLayerIfNeeded: true, allowGay: true, allowFood: true, allowAddictions: true, inhabitant: false, certainlyBeenInCryptosleep: false, forceRedressWorldPawnIfFormerColonist: false, worldPawnFactionDoesntMatter: false, 0f, null, 1f, null, null, null, null, 0.2f));
+			//HealthUtility.DamageUntilDowned(pawn, allowBleedingWounds: false);
+			//HealthUtility.DamageLegsUntilIncapableOfMoving(pawn, allowBleedingWounds: false);
+			//return pawn;
+			return null;
 		}
 
 		public static Faction GetRandomFactionForRefugee()
