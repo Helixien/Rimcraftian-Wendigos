@@ -203,8 +203,8 @@
         <defaultFactionType>RCW_FeralWendigos</defaultFactionType>
     </PawnKindDef>
 
-    <PawnKindDef ParentName="RCW_WendigoKindBase" Name="RCW_WendigoFeral" Abstract="True">
-        <defName>RCW_WendigoFeral</defName>
+    <PawnKindDef ParentName="RCW_WendigoKindBase">
+        <defName>RCW_FeralWendigo</defName>
         <label>feral wendigo</label>
         <race>RCW_FeralWendigo</race>
         <combatPower>250</combatPower>
@@ -225,11 +225,6 @@
                 </dessicatedBodyGraphicData>
             </li>
         </lifeStages>
-    </PawnKindDef>
-	
-    <PawnKindDef ParentName="RCW_WendigoFeral">
-        <defName>RCW_WendigoFeralControlled</defName>
-        <canArriveManhunter>false</canArriveManhunter>
     </PawnKindDef>
 	
 	<!-- ============================================================ -->
