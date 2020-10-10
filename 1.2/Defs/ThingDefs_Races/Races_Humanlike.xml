@@ -3,15 +3,15 @@
 
 	<ThingDef ParentName="BasePawn">
 		<defName>RCW_WendigoFledgling</defName>
-		<label>wendigo</label>
-		<description>A baseline human, mostly unmodified by gene engineering and mostly unchanged by evolutionary pressures on non-Earth planets.</description>
+		<label>fledgling wendigo</label>
+		<description>A being effected by early wendigoism, faster and more deadly than baseline human but slowly going crazy.</description>
 		<statBases>
-			<MarketValue>1750</MarketValue>
-			<MoveSpeed>4.6</MoveSpeed>
-			<ComfyTemperatureMin>16</ComfyTemperatureMin>
-			<ComfyTemperatureMax>26</ComfyTemperatureMax>
+			<MarketValue>2250</MarketValue>
+			<MoveSpeed>5.2</MoveSpeed>
+			<ComfyTemperatureMin>0</ComfyTemperatureMin>
+			<ComfyTemperatureMax>18</ComfyTemperatureMax>
 			<LeatherAmount>50</LeatherAmount>
-			<RoyalFavorValue>3</RoyalFavorValue>
+			<RoyalFavorValue>4</RoyalFavorValue>
 		</statBases>
 		<tools>
 			<li>
@@ -19,7 +19,7 @@
 				<capacities>
 					<li>Blunt</li>
 				</capacities>
-				<power>8.2</power>
+				<power>12.2</power>
 				<cooldownTime>2</cooldownTime>
 				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
 				<surpriseAttack>
@@ -36,7 +36,7 @@
 				<capacities>
 					<li>Blunt</li>
 				</capacities>
-				<power>8.2</power>
+				<power>12.2</power>
 				<cooldownTime>2</cooldownTime>
 				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
 				<surpriseAttack>
@@ -53,10 +53,9 @@
 				<capacities>
 					<li>Bite</li>
 				</capacities>
-				<power>8.2</power>
+				<power>18.2</power>
 				<cooldownTime>2</cooldownTime>
 				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
-				<chanceFactor>0.07</chanceFactor>
 				<soundMeleeHit>Pawn_Melee_HumanBite_Hit</soundMeleeHit>
 				<soundMeleeMiss>Pawn_Melee_HumanBite_Miss</soundMeleeMiss>
 			</li>
@@ -65,11 +64,11 @@
 				<capacities>
 					<li>Blunt</li>
 				</capacities>
-				<power>5</power>
+				<power>10</power>
 				<cooldownTime>2</cooldownTime>
 				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
 				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-				<chanceFactor>0.2</chanceFactor>
+				<chanceFactor>0.6</chanceFactor>
 			</li>
 		</tools>
 		<race>
@@ -77,12 +76,12 @@
 			<thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
 			<intelligence>Humanlike</intelligence>
 			<makesFootprints>true</makesFootprints>
-			<lifeExpectancy>80</lifeExpectancy>
+			<lifeExpectancy>180</lifeExpectancy>
 			<leatherDef>Leather_Human</leatherDef>
 			<nameCategory>HumanStandard</nameCategory>
 			<body>Human</body>
 			<baseBodySize>1</baseBodySize>
-			<baseHealthScale>1</baseHealthScale>
+			<baseHealthScale>1.2</baseHealthScale>
 			<foodType>OmnivoreHuman</foodType>
 			<gestationPeriodDays>45</gestationPeriodDays>
 			<meatMarketValue>0.8</meatMarketValue>
@@ -154,31 +153,5 @@
 			<li MayRequire="Ludeon.RimWorld.Royalty">CureAbasia</li>
 		</recipes>
 	</ThingDef>
-	
-	<!-- ============================================================ -->
-
-	<PawnKindDef Name="RCW_WendingoHumanoidBase" Abstract="True">
-		<race>RCW_WendigoFledgling</race>
-		<defaultFactionType>RCW_FeralWendigos</defaultFactionType>
-		<maxGenerationAge>60</maxGenerationAge>
-		<chemicalAddictionChance>0.05</chemicalAddictionChance>
-		<invNutrition>2.55</invNutrition>
-		<invFoodDef>Pemmican</invFoodDef>
-		<apparelTags>
-			<li>Neolithic</li>
-		</apparelTags>
-	</PawnKindDef>
-
-	<PawnKindDef ParentName="RCW_WendingoHumanoidBase">
-		<defName>RCW_WendigoFledgling</defName>
-		<label>wendingo fledling</label>
-		<combatPower>90</combatPower>
-		<canBeSapper>true</canBeSapper>
-		<apparelMoney>200~550</apparelMoney>
-		<weaponMoney>300~300</weaponMoney>
-		<weaponTags>
-			<li>NeolithicMeleeAdvanced</li>
-		</weaponTags>
-	</PawnKindDef>
 
 </Defs>
