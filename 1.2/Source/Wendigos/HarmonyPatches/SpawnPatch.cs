@@ -22,8 +22,9 @@ namespace Wendigos
     {
         private static void Postfix(Thing __instance)
         {
-            if (__instance is Pawn pawn && pawn.IsWendigo() && pawn.health?.hediffSet?.GetFirstHediffOfDef(WendigosDefOf.RCW_WendigoismActive) == null)
+            if (__instance is Pawn pawn && pawn.IsWendigo() && pawn.health?.hediffSet != null && !pawn.health.hediffSet.HasHediff(WendigosDefOf.RCW_WendigoismActive))
             {
+                Log.Message(pawn + " gets RCW_WendigoismActive as a wendigo");
                 var hediff = HediffMaker.MakeHediff(WendigosDefOf.RCW_WendigoismActive, pawn);
                 pawn.health.AddHediff(hediff);
             }
