@@ -11,11 +11,14 @@ namespace Wendigos
 {
     public class Hediff_WendigoismActive : HediffWithComps
     {
-        public override void PostAdd(DamageInfo? dinfo)
-        {
-            base.PostAdd(dinfo);
-            pawn.story.melanin = 0f;
-        }
+        //public override void PostAdd(DamageInfo? dinfo)
+        //{
+        //    base.PostAdd(dinfo);
+        //    if (pawn.kindDef == RCW_PawnKindDefOf. && pawn.story != null)
+        //    {
+        //        pawn.story.melanin = 0f;
+        //    }
+        //}
         public override void Tick()
         {
             base.Tick();
