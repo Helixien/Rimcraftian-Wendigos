@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ThingDef ParentName="SculptureBase">
+        <defName>RCW_WendigoTotem</defName>
+        <label>wendigo totem</label>
+        <description>placeholder</description>
+        <castEdgeShadows>true</castEdgeShadows>
+        <graphicData>
+            <graphicClass>Graphic_Random</graphicClass>
+            <texPath>Things/Building/Art/WendigoTotem</texPath>
+            <drawSize>(3,3)</drawSize>
+        </graphicData>
+        <fillPercent>0.5</fillPercent>
+        <rotatable>false</rotatable>
+        <thingCategories>
+            <li>BuildingsMisc</li>
+        </thingCategories>
+        <statBases>
+            <MaxHitPoints>150</MaxHitPoints>
+            <Mass>7</Mass>
+            <Beauty>100</Beauty>
+            <WorkToMake>30000</WorkToMake>
+        </statBases>
+        <stuffCategories>
+            <li>Metallic</li>
+            <li>Woody</li>
+            <li>Stony</li>
+        </stuffCategories>
+        <costStuffCount>75</costStuffCount>
+    </ThingDef>
+
+</Defs>
