@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <PawnKindDef Name="RCW_CannibalBase" Abstract="True">
+        <race>Human</race>
+        <defaultFactionType>RCW_CultCannibal</defaultFactionType>
+        <maxGenerationAge>60</maxGenerationAge>
+        <chemicalAddictionChance>0.0</chemicalAddictionChance>
+        <invNutrition>2.55</invNutrition>
+        <invFoodDef>Pemmican</invFoodDef>
+        <techHediffsChance>0.0</techHediffsChance>
+        <apparelTags>
+            <li>Neolithic</li>
+        </apparelTags>
+    </PawnKindDef>
+
+    <!-- Poverty tier - penitent -->
+    <PawnKindDef ParentName="RCW_CannibalBase">
+        <defName>RCW_Cannibal_Culstist</defName>
+        <label>culstist</label>
+        <combatPower>35</combatPower>
+        <chemicalAddictionChance>0.10</chemicalAddictionChance>
+        <invNutrition>0</invNutrition>
+        <itemQuality>Poor</itemQuality>
+        <gearHealthRange>0.2~1.1</gearHealthRange>
+        <apparelMoney>50~100</apparelMoney>
+        <weaponMoney>90~150</weaponMoney>
+        <weaponTags>
+            <li>NeolithicMeleeBasic</li>
+        </weaponTags>
+
+    </PawnKindDef>
+
+    <!-- Low tier - archer -->
+    <PawnKindDef ParentName="RCW_CannibalBase">
+        <defName>RCW_Cannibal_Archer</defName>
+        <label>archer</label>
+        <combatPower>48</combatPower>
+        <itemQuality>Poor</itemQuality>
+        <gearHealthRange>0.5~1.8</gearHealthRange>
+        <apparelMoney>180~350</apparelMoney>
+        <weaponMoney>80~80</weaponMoney>
+        <weaponTags>
+            <li>NeolithicRangedBasic</li>
+        </weaponTags>
+        <disallowedTraits>
+            <li>Brawler</li>
+        </disallowedTraits>
+    </PawnKindDef>
+
+    <!-- Mid tier - warrior, hunter, trader -->
+    <PawnKindDef ParentName="RCW_CannibalBase">
+        <defName>RCW_Cannibal_Warrior</defName>
+        <label>warrior</label>
+        <combatPower>60</combatPower>
+        <itemQuality>Poor</itemQuality>
+        <canBeSapper>true</canBeSapper>
+        <gearHealthRange>0.5~1.8</gearHealthRange>
+        <apparelMoney>200~300</apparelMoney>
+        <apparelRequired>
+            <li>Apparel_WarVeil</li>
+        </apparelRequired>
+        <weaponMoney>150~150</weaponMoney>
+        <weaponTags>
+            <li>NeolithicMeleeDecent</li>
+        </weaponTags>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="RCW_CannibalBase" Name="Tribal_Hunter">
+        <defName>RCW_Cannibal_Hunter</defName>
+        <label>hunter</label>
+        <combatPower>65</combatPower>
+        <gearHealthRange>0.5~1.8</gearHealthRange>
+        <apparelMoney>200~300</apparelMoney>
+        <apparelRequired>
+            <li>Apparel_WarVeil</li>
+        </apparelRequired>
+        <weaponMoney>100~100</weaponMoney>
+        <weaponTags>
+            <li>NeolithicRangedDecent</li>
+        </weaponTags>
+        <disallowedTraits>
+            <li>Brawler</li>
+        </disallowedTraits>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="Tribal_Hunter">
+        <defName>RCW_Cannibal_Trader</defName>
+        <label>trader</label>
+        <trader>true</trader>
+        <apparelRequired Inherit="False">
+            <li>Apparel_TribalHeaddress</li>
+        </apparelRequired>
+    </PawnKindDef>
+
+    <!-- High tier - berserker, heavy archer, chief melee, chief ranged -->
+    <PawnKindDef ParentName="RCW_CannibalBase">
+        <defName>RCW_Cannibal_Fighter</defName>
+        <label>fighter</label>
+        <combatPower>90</combatPower>
+        <canBeSapper>true</canBeSapper>
+        <apparelMoney>200~550</apparelMoney>
+        <apparelRequired>
+            <li>Apparel_WarMask</li>
+        </apparelRequired>
+        <weaponMoney>300~300</weaponMoney>
+        <weaponTags>
+            <li>NeolithicMeleeAdvanced</li>
+        </weaponTags>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="RCW_CannibalBase">
+        <defName>RCW_Cannibal_HeavyArcher</defName>
+        <label>heavy archer</label>
+        <combatPower>90</combatPower>
+        <apparelMoney>200~550</apparelMoney>
+        <apparelRequired>
+            <li>Apparel_WarMask</li>
+        </apparelRequired>
+        <weaponMoney>250~250</weaponMoney>
+        <weaponTags>
+            <li>NeolithicRangedHeavy</li>
+        </weaponTags>
+        <disallowedTraits>
+            <li>Brawler</li>
+        </disallowedTraits>
+    </PawnKindDef>
+	
+    <PawnKindDef ParentName="RCW_CannibalBase">
+        <defName>RCW_Cannibal_Gunner</defName>
+        <label>gunner</label>
+        <combatPower>100</combatPower>
+        <apparelMoney>200~550</apparelMoney>
+        <apparelRequired>
+            <li>Apparel_WarMask</li>
+        </apparelRequired>
+        <weaponMoney>250~250</weaponMoney>
+        <weaponTags>
+            <li>SimpleGun</li>
+        </weaponTags>
+        <disallowedTraits>
+            <li>Brawler</li>
+        </disallowedTraits>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="RCW_CannibalBase" Name="RCW_CannibalLeader" Abstract="True">
+        <combatPower>130</combatPower>
+        <baseRecruitDifficulty>0.90</baseRecruitDifficulty>
+        <minGenerationAge>30</minGenerationAge>
+        <maxGenerationAge>999</maxGenerationAge>
+        <itemQuality>Normal</itemQuality>
+        <factionLeader>true</factionLeader>
+        <canBeSapper>true</canBeSapper>
+        <apparelMoney>450~750</apparelMoney>
+        <apparelRequired>
+            <li>Apparel_TribalHeaddress</li>
+            <li>Apparel_PlateArmor</li>
+        </apparelRequired>
+        <weaponMoney>500~1000</weaponMoney>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="RCW_CannibalLeader">
+        <defName>RCW_Cannibal_CultistMelee</defName>
+        <label>cultist leader</label>
+        <weaponTags>
+            <li>NeolithicMeleeAdvanced</li>
+            <li>MedievalMeleeAdvanced</li>
+        </weaponTags>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="RCW_CannibalLeader">
+        <defName>RCW_Cannibal_CultistRanged</defName>
+        <label>cultist leader</label>
+        <weaponTags>
+            <li>NeolithicRangedChief</li>
+			<li>SimpleGun</li>
+        </weaponTags>
+        <disallowedTraits>
+            <li>Brawler</li>
+        </disallowedTraits>
+    </PawnKindDef>
+
+    <PawnKindDef Name="RCW_FledglingBase" Abstract="True">
+        <race>RCW_WendigoFledgling</race>
+        <defaultFactionType>RCW_CultCannibal</defaultFactionType>
+        <maxGenerationAge>60</maxGenerationAge>
+        <invNutrition>2.55</invNutrition>
+        <invFoodDef>Pemmican</invFoodDef>
+        <apparelTags>
+            <li>Neolithic</li>
+        </apparelTags>
+    </PawnKindDef>
+	
+    <PawnKindDef ParentName="RCW_CannibalBase">
+        <defName>RCW_Cannibal_Skinwalker</defName>
+        <label>fighter</label>
+        <combatPower>90</combatPower>
+        <canBeSapper>true</canBeSapper>
+        <apparelMoney>200~550</apparelMoney>
+        <apparelRequired>
+            <li>Apparel_WarMask</li>
+        </apparelRequired>
+        <weaponMoney>300~300</weaponMoney>
+        <weaponTags>
+            <li>NeolithicMeleeAdvanced</li>
+        </weaponTags>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="RCW_CannibalBase">
+        <defName>RCW_Cannibal_Gravewalker</defName>
+        <label>heavy archer</label>
+        <combatPower>90</combatPower>
+        <apparelMoney>200~550</apparelMoney>
+        <apparelRequired>
+            <li>Apparel_WarMask</li>
+        </apparelRequired>
+        <weaponMoney>250~250</weaponMoney>
+        <weaponTags>
+            <li>NeolithicRangedHeavy</li>
+        </weaponTags>
+        <disallowedTraits>
+            <li>Brawler</li>
+        </disallowedTraits>
+    </PawnKindDef>
+	
+    <PawnKindDef ParentName="RCW_CannibalBase">
+        <defName>RCW_Cannibal_Feeder</defName>
+        <label>heavy archer</label>
+        <combatPower>90</combatPower>
+        <apparelMoney>200~550</apparelMoney>
+        <apparelRequired>
+            <li>Apparel_WarMask</li>
+        </apparelRequired>
+        <weaponMoney>250~250</weaponMoney>
+        <weaponTags>
+            <li>NeolithicRangedHeavy</li>
+        </weaponTags>
+        <disallowedTraits>
+            <li>Brawler</li>
+        </disallowedTraits>
+    </PawnKindDef>
+
+</Defs>

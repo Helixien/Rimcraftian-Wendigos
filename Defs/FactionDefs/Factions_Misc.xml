@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <FactionDef ParentName="HumanFactionBase" Name="RCW_WendigoCultBase" Abstract="True">
+        <pawnSingular>cannibal</pawnSingular>
+        <pawnsPlural>cannibals</pawnsPlural>
+        <categoryTag>Tribal</categoryTag>
+        <listOrderPriority>20</listOrderPriority>
+        <settlementGenerationWeight>0.3</settlementGenerationWeight>
+        <requiredCountAtGameStart>1</requiredCountAtGameStart>
+        <canMakeRandomly>true</canMakeRandomly>
+        <canStageAttacks>true</canStageAttacks>
+        <geneticVariance>0.1</geneticVariance>
+        <factionNameMaker>NamerFactionTribal</factionNameMaker>
+        <settlementNameMaker>NamerSettlementTribal</settlementNameMaker>
+        <pawnNameMaker>NamerPersonTribal</pawnNameMaker>
+        <techLevel>Neolithic</techLevel>
+        <backstoryFilters>
+            <li>
+                <categories>
+                    <li>Tribal</li>
+                </categories>
+            </li>
+        </backstoryFilters>
+        <leaderTitle>fleshwalker</leaderTitle>
+        <hairTags>
+            <li>Tribal</li>
+        </hairTags>
+        <caravanTraderKinds>
+            <li>Caravan_Neolithic_WarMerchant</li>
+            <li>Caravan_Neolithic_Slaver</li>
+        </caravanTraderKinds>
+        <visitorTraderKinds>
+            <li>Visitor_Neolithic_Standard</li>
+        </visitorTraderKinds>
+        <baseTraderKinds>
+            <li>Base_Neolithic_Standard</li>
+        </baseTraderKinds>
+        <allowedArrivalTemperatureRange>-40~45</allowedArrivalTemperatureRange>
+        <raidCommonalityFromPointsCurve>
+            <points>
+                <li>(0, 1)</li>
+                <!--Constant 1 at all points levels-->
+            </points>
+        </raidCommonalityFromPointsCurve>
+        <raidLootMaker>TribeRaidLootMaker</raidLootMaker>
+        <maxPawnCostPerTotalPointsCurve>
+            <points>
+                <li>(0,35)</li>
+                <li>(70, 50)</li>
+                <li>(800, 100)</li>
+                <li>(1300, 150)</li>
+                <li>(100000, 10000)</li>
+            </points>
+        </maxPawnCostPerTotalPointsCurve>
+        <pawnGroupMakers>
+            <li>
+                <!-- Normal fights, ranged with melee mix-ins -->
+                <kindDef>Combat</kindDef>
+                <commonality>100</commonality>
+                <options>
+                    <RCW_Cannibal_Culstist>5</RCW_Cannibal_Culstist>
+                    <RCW_Cannibal_Warrior>5</RCW_Cannibal_Warrior>
+                    <RCW_Cannibal_Archer>10</RCW_Cannibal_Archer>
+                    <RCW_Cannibal_Hunter>10</RCW_Cannibal_Hunter>
+                    <RCW_Cannibal_HeavyArcher>10</RCW_Cannibal_HeavyArcher>
+					<RCW_Cannibal_Gunner>10</RCW_Cannibal_Gunner>
+                    <RCW_Cannibal_Fighter>10</RCW_Cannibal_Fighter>
+                    <RCW_Cannibal_CultistMelee>1.5</RCW_Cannibal_CultistMelee>
+                    <RCW_Cannibal_CultistRanged>1.5</RCW_Cannibal_CultistRanged>
+                </options>
+            </li>
+            <li>
+                <!-- Normal fights, ranged only -->
+                <kindDef>Combat</kindDef>
+                <commonality>60</commonality>
+                <options>
+                    <RCW_Cannibal_Archer>10</RCW_Cannibal_Archer>
+                    <RCW_Cannibal_Hunter>10</RCW_Cannibal_Hunter>
+                    <RCW_Cannibal_HeavyArcher>10</RCW_Cannibal_HeavyArcher>
+					<RCW_Cannibal_Gunner>10</RCW_Cannibal_Gunner>
+                    <RCW_Cannibal_CultistRanged>5</RCW_Cannibal_CultistRanged>
+                </options>
+            </li>
+            <li>
+                <!-- Normal fights, melee only -->
+                <kindDef>Combat</kindDef>
+                <commonality>60</commonality>
+                <options>
+                    <RCW_Cannibal_Culstist>10</RCW_Cannibal_Culstist>
+                    <RCW_Cannibal_Warrior>10</RCW_Cannibal_Warrior>
+                    <RCW_Cannibal_Fighter>10</RCW_Cannibal_Fighter>
+                    <RCW_Cannibal_CultistMelee>5</RCW_Cannibal_CultistMelee>
+                </options>
+            </li>
+            <li>
+                <!-- Peaceful -->
+                <kindDef>Peaceful</kindDef>
+                <options>
+                    <RCW_Cannibal_Warrior>20</RCW_Cannibal_Warrior>
+                    <RCW_Cannibal_Archer>10</RCW_Cannibal_Archer>
+                    <RCW_Cannibal_Hunter>10</RCW_Cannibal_Hunter>
+                    <RCW_Cannibal_HeavyArcher>10</RCW_Cannibal_HeavyArcher>
+					<RCW_Cannibal_Gunner>10</RCW_Cannibal_Gunner>
+                    <RCW_Cannibal_Fighter>5</RCW_Cannibal_Fighter>
+                    <RCW_Cannibal_CultistMelee>3</RCW_Cannibal_CultistMelee>
+                    <RCW_Cannibal_CultistRanged>1.5</RCW_Cannibal_CultistRanged>
+                </options>
+            </li>
+            <li>
+                <kindDef>Trader</kindDef>
+                <traders>
+                    <RCW_Cannibal_Trader>1</RCW_Cannibal_Trader>
+                </traders>
+                <carriers>
+                    <Muffalo>6</Muffalo>
+                    <Dromedary>5</Dromedary>
+                    <Alpaca>2.5</Alpaca>
+                    <Elephant>2</Elephant>
+                </carriers>
+                <guards>
+                    <RCW_Cannibal_Warrior>7</RCW_Cannibal_Warrior>
+                    <RCW_Cannibal_Archer>10</RCW_Cannibal_Archer>
+                    <RCW_Cannibal_Hunter>10</RCW_Cannibal_Hunter>
+                    <RCW_Cannibal_HeavyArcher>10</RCW_Cannibal_HeavyArcher>
+					<RCW_Cannibal_Gunner>10</RCW_Cannibal_Gunner>
+                    <RCW_Cannibal_Fighter>7</RCW_Cannibal_Fighter>
+                </guards>
+            </li>
+            <li>
+                <kindDef>Settlement</kindDef>
+                <options>
+                    <RCW_Cannibal_Warrior>7</RCW_Cannibal_Warrior>
+                    <RCW_Cannibal_Archer>10</RCW_Cannibal_Archer>
+                    <RCW_Cannibal_Hunter>10</RCW_Cannibal_Hunter>
+                    <RCW_Cannibal_HeavyArcher>10</RCW_Cannibal_HeavyArcher>
+					<RCW_Cannibal_Gunner>10</RCW_Cannibal_Gunner>
+                    <RCW_Cannibal_Fighter>7</RCW_Cannibal_Fighter>
+                    <RCW_Cannibal_CultistMelee>10</RCW_Cannibal_CultistMelee>
+                </options>
+            </li>
+        </pawnGroupMakers>
+        <settlementTexturePath>World/WorldObjects/TribalSettlement</settlementTexturePath>
+        <factionIconPath>World/WorldObjects/Expanding/WendigoTribe</factionIconPath>
+    </FactionDef>
+
+    <FactionDef ParentName="RCW_WendigoCultBase">
+        <defName>RCW_CultCannibal</defName>
+        <label>cannibalistic cult</label>
+        <description>These people have been here a very long time. They seem to worship ancient creatures and gods, beliving that consuming human flesh will give them powers or the favour of their gods. Unlike other tribals, they are not nomadic people and even use more modern guns.\n\nDespite their apparent technological weakness, the cannibalistic cults can be dangerous enemies because of their psychopathic nature and strange mutations.\n\nYou will not be able to ally with them!</description>
+        <colorSpectrum>
+            <li>(0.7, 0.6, 0.55)</li>
+            <li>(0.71, 0.71, 0.75)</li>
+        </colorSpectrum>
+    </FactionDef>
+
+</Defs>
