@@ -4,6 +4,7 @@
     <ThingDef ParentName="BuildingNaturalBase">
         <defName>RCW_BonePiles</defName>
         <label>bone piles</label>
+		<thingClass>Building</thingClass>
         <description>A pile of bones, long stipped of all their meat.</description>
         <graphicData>
             <texPath>Things/Building/Furniture/Misc/BonePile</texPath>
