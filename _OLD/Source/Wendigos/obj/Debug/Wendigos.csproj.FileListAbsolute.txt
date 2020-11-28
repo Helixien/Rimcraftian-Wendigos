@@ -1,0 +1,9 @@
+c:\GAMES\Rimworld\Mods\Rimcraftian-Wendigos\1.2\Assemblies\Wendigos.dll
+c:\GAMES\Rimworld\Mods\Rimcraftian-Wendigos\Source\Wendigos\obj\Debug\Wendigos.csprojAssemblyReference.cache
+c:\GAMES\Rimworld\Mods\Rimcraftian-Wendigos\Source\Wendigos\obj\Debug\Wendigos.csproj.CoreCompileInputs.cache
+c:\GAMES\Rimworld\Mods\Rimcraftian-Wendigos\Source\Wendigos\obj\Debug\Wendigos.csproj.CopyComplete
+c:\GAMES\Rimworld\Mods\Rimcraftian-Wendigos\Source\Wendigos\obj\Debug\Wendigos.dll
+c:\GAMES\Rimworld\Mods\Rimcraftian-Wendigos\1.2\Source\Wendigos\obj\Debug\Wendigos.csprojAssemblyReference.cache
+c:\GAMES\Rimworld\Mods\Rimcraftian-Wendigos\1.2\Source\Wendigos\obj\Debug\Wendigos.csproj.CoreCompileInputs.cache
+c:\GAMES\Rimworld\Mods\Rimcraftian-Wendigos\1.2\Source\Wendigos\obj\Debug\Wendigos.csproj.CopyComplete
+c:\GAMES\Rimworld\Mods\Rimcraftian-Wendigos\1.2\Source\Wendigos\obj\Debug\Wendigos.dll

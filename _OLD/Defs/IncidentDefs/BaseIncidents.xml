@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<IncidentDef>
+		<defName>RCW_WendigoPack</defName>
+		<minRefireDays>120</minRefireDays>
+		<label>wendigo pack</label>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<letterLabel>Wendigo pack</letterLabel>
+		<letterDef>ThreatBig</letterDef>
+		<letterText>Wendigo pack.</letterText>
+		<workerClass>Wendigos.IncidentWorker_WendingoPack</workerClass>
+		<baseChance>0.3</baseChance>
+		<category>ThreatBig</category>
+		<tale>Raid</tale>
+	</IncidentDef>
+
+	<IncidentDef>
+		<defName>RCW_CannibalRaid</defName>
+		<minRefireDays>120</minRefireDays>
+		<label>cannibal raid</label>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<letterLabel>cannibal raid</letterLabel>
+		<letterDef>ThreatBig</letterDef>
+		<letterText>cannibal raid.</letterText>
+		<workerClass>Wendigos.IncidentWorker_CannibalRaid</workerClass>
+		<baseChance>0.3</baseChance>
+		<category>ThreatBig</category>
+		<tale>Raid</tale>
+	</IncidentDef>
+
+</Defs>

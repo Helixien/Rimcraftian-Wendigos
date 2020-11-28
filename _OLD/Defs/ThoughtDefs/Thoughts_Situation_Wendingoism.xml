@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ThoughtDef>
+        <defName>RCW_StrangeHunger</defName>
+        <workerClass>Wendigos.ThoughtWorker_StrangeHunger</workerClass>
+        <nullifyingTraits>
+            <li>Cannibal</li>
+        </nullifyingTraits>
+        <stages>
+            <li>
+                <label>strange hunger</label>
+                <description>I feel a strange hunger for….. human flesh? What is happening to me!?</description>
+                <baseMoodEffect>-5</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>RCW_HotTemperature</defName>
+        <workerClass>Wendigos.ThoughtWorker_FledlingTemperature</workerClass>
+        <stages>
+            <li>
+                <label>Hot weather</label>
+                <description>Hot weather</description>
+                <baseMoodEffect>-5</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+	
+	  <ThoughtDef>
+    <defName>RCW_AteHumanlikeMeatDirectWendigo</defName>
+    <showBubble>true</showBubble>
+    <icon>Things/Mote/ThoughtSymbol/Food</icon>
+    <durationDays>1</durationDays>
+    <stages>
+      <li>
+        <label>raw cannibalism</label>
+        <description>I ate the meat of another human, raw, like an animal. It was so... succulent.</description>
+        <baseMoodEffect>20</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+</Defs>

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <DutyDef>
+    <defName>RCW_WendigoAssaultColony</defName>
+    <alwaysShowWeapon>true</alwaysShowWeapon>
+    <thinkNode Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="JobGiver_AIFightEnemies">
+          <targetAcquireRadius>65</targetAcquireRadius>
+          <targetKeepRadius>72</targetKeepRadius>
+        </li>
+        <li Class="JobGiver_AIGotoNearestHostile" />
+      </subNodes>
+    </thinkNode>
+  </DutyDef>
+  
+  	<DutyDef>
+		<defName>RCW_CannibalAssaultColony</defName>
+		<alwaysShowWeapon>true</alwaysShowWeapon>
+		<thinkNode Class="ThinkNode_Priority">
+			<subNodes>
+				<li Class="JobGiver_TakeCombatEnhancingDrug" />
+				<li Class="Wendigos.JobGiver_CaptureDownedVictimAndLeaveMap" />
+				<li Class="JobGiver_AIFightEnemies">
+					<targetAcquireRadius>65</targetAcquireRadius>
+					<targetKeepRadius>72</targetKeepRadius>
+				</li>
+				<li Class="Wendigos.JobGiver_CaptureDownedVictimAndLeaveMap" />
+				<li Class="JobGiver_AITrashColonyClose" />
+				<li Class="Wendigos.JobGiver_CaptureDownedVictimAndLeaveMap" />
+				<li Class="JobGiver_AITrashBuildingsDistant" />
+				<li Class="Wendigos.JobGiver_CaptureDownedVictimAndLeaveMap" />
+				<li Class="JobGiver_AIGotoNearestHostile" />
+				<li Class="Wendigos.JobGiver_CaptureDownedVictimAndLeaveMap" />
+				<li Class="JobGiver_AITrashBuildingsDistant">
+					<attackAllInert>true</attackAllInert>
+				</li>
+				<li Class="Wendigos.JobGiver_CaptureDownedVictimAndLeaveMap" />
+				<li Class="JobGiver_AISapper">
+					<canMineNonMineables>false</canMineNonMineables>
+				</li>
+				<li Class="Wendigos.JobGiver_CaptureDownedVictimAndLeaveMap" />
+			</subNodes>
+		</thinkNode>
+	</DutyDef>
+	
+   
+
+</Defs>
