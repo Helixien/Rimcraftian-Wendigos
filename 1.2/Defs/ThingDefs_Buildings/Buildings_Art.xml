@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ThingDef ParentName="SculptureBase">
+        <defName>RCW_WendigoTotem</defName>
+        <label>wendigo totem</label>
+        <description>A totem made by canibal cults out different material sculpted into an artistic form.</description>
+        <castEdgeShadows>true</castEdgeShadows>
+        <graphicData>
+            <texPath>Things/Building/Art/WendigoTotem</texPath>
+            <graphicClass>Graphic_Random</graphicClass>
+            <drawSize>(4,4)</drawSize>
+        </graphicData>
+		<canOverlapZones>false</canOverlapZones>
+        <fillPercent>0.5</fillPercent>
+        <rotatable>false</rotatable>
+		<size>(2,2)</size>
+        <statBases>
+            <MaxHitPoints>250</MaxHitPoints>
+            <Mass>24</Mass>
+            <Beauty>400</Beauty>
+            <WorkToMake>95000</WorkToMake>
+        </statBases>
+        <stuffCategories>
+            <li>Metallic</li>
+            <li>Woody</li>
+            <li>Stony</li>
+        </stuffCategories>
+        <costStuffCount>320</costStuffCount>
+    </ThingDef>
+
+</Defs>
